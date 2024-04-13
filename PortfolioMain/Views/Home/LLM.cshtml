@@ -1,0 +1,89 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    #model-summary {
+        width: 100%;
+        height: auto; /* Adjust the height based on your content or leave it to auto */
+        border: 1px solid #ccc; /* Optional: adds a border around the model summary */
+        padding: 10px;
+    }
+</style>
+
+<link rel="stylesheet" href="~/css/pages/LLM.css" />
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Intro')" id="defaultOpen">Introduction</button>
+    <button class="tablinks" onclick="openTab(event, 'NLPchatbot')">NLP chatbot</button>
+    <button class="tablinks" onclick="openTab(event, 'brainjsChatBot')">brain.js Chatbot</button>
+    <!--<button class="tablinks" onclick="openTab(event, 'Bertchatbot')">Bert ONNX chatbot</button>-->
+    <button class="tablinks" onclick="openTab(event, 'ChatGPT4')">ChatGPT4 Langchain chatbot</button>
+</div>
+
+<div id="Intro" class="tabcontent">
+    <h3>History of Chatbots</h3>
+    <div class="chat-container">
+        <p>
+            This demonstration showcases the progressive evolution of chatbots through various technological eras, illustrating significant advancements in their capabilities. Initially, we present a basic Natural Language Processing (NLP) chatbot that employs elementary algorithms to interact with users. Following this, the second-generation chatbot utilizes a Long Short-Term Memory (LSTM) neural network, developed with the TensorFlow.js framework, to refine its responses based on user prompts. The third iteration integrates a transformer model from BERT, adapted for .NET environments via the ONNX framework, enhancing its interoperability within the ML.NET platform. The most advanced chatbot in this sequence harnesses OpenAI's API in conjunction with LangChain to create sophisticated memory and agent systems, further augmenting the capabilities of ChatGPT-4. Please navigate through the tabs above to explore each chatbot in detail.
+        </p>
+    </div>
+</div>
+
+<div id="NLPchatbot" class="tabcontent">
+    <h3>NLP bot - classification</h3>
+    <div class="chat-container">
+        <div class="chat-log">Classification type: </div>
+        <input type="text" id="NLPtxt" class="chat-input" placeholder="Type your message...">
+        <button id="NLPbtn">Send</button>
+    </div>
+</div>
+
+<div id="brainjsChatBot" class="tabcontent">
+    <h3>Brain.js Chatbot</h3>
+    <div class="chat-container">
+        <div class="chat-log" id="brainjsChatLog"></div>
+        <input type="text" id="brainjsTxt" class="chat-input" placeholder="Type your message...">
+        <button id="brainjsBtn">Send</button>
+    </div>
+    <div id="model-summary"></div>
+</div>
+
+<!--<div id="Bertchatbot" class="tabcontent">
+    <h3>Chatbot 2</h3>
+    <div class="chat-container">
+        <div class="chat-log"></div>
+        <input type="text" id="bertTxt" class="chat-input" placeholder="Type your message...">
+        <button id="bertBtn">Send</button>
+    </div>
+</div>-->
+
+<div id="ChatGPT4" class="tabcontent">
+    <h3>Openai & langchain</h3>
+    <div class="chat-container">
+        <div class="chat-log">
+
+        </div>
+        <input type="text" id="chatGPTtxt" class="chat-input form-control" placeholder="Type your message...">
+        <button id="chatGPTbtn" class="btn">Send</button>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, chatbotName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(chatbotName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+<script src="~/js/pages/LLM.js"></script>

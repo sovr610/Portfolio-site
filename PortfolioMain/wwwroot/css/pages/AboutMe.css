@@ -1,0 +1,6 @@
+﻿#gameContainer {
+    width: 800px; /* Match the width of your Phaser game */
+    height: 600px; /* Match the height of your Phaser game */
+    margin: auto; /* Center the game on the page */
+    border: 1px solid #000; /* Optional border for visibility */
+}
