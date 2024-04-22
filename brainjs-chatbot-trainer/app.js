@@ -1,28 +1,26 @@
-'use stricconst brain = require('brain.js');
-const fs = require('fs');  // Required for file system access
+const brain = require('brain.js');
+const fs = require('fs');
 
-// Initialize the neural network
 const network = new brain.recurrent.LSTM({
-    hiddenLayers: [5, 5], // Example of a more complex model that might benefit from GPU acceleration
-    activation: 'sigmoid',  // Using sigmoid activation function
-    learningRate: 0.01,     // Setting learning rate
+    hiddenLayers: [10, 20,10],  // More complex model
+    activation: 'sigmoid',      // Experiment with ReLU for potentially better performance
+    learningRate: 0.01,      // Lower starting learning rate
+    leakyReluAlpha: 0.01,    // Leaky ReLU to prevent dying ReLU
     regularization: { type: 'L2', lambda: 0.01 },
-    gpu: true               // Enable GPU processing
+    gpu: true
 });
 
-// Define the training data
 const trainingData = fs.readFileSync('train-data.json', 'utf8');
-let dataObj = JSON.parse(trainingData)
-// Train the network
+let dataObj = JSON.parse(trainingData);
+
 network.train(dataObj, {
-    iterations: 50,
-    errorThresh: 0.005,
-    log: true,
-    logPeriod: 1,
-    learningRate: 0.3
+    iterations: 200,        // More iterations for deeper learning
+    errorThresh: 0.005,     // Same error threshold for fine-tuning
+    log: true,              // Enable logging to monitor training progress
+    logPeriod: 10,          // Log every 10 iterations
+    learningRate: 0.01      // Consistent learning rate
 });
 
-// Save the model to a file
 const modelJson = network.toJSON();
 fs.writeFileSync('chatbot-model.json', JSON.stringify(modelJson), 'utf8');
 

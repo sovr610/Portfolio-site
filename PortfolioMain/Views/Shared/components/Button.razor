@@ -1,0 +1,57 @@
+﻿<style>
+    .custom-button {
+        @customCss
+    }
+</style>
+
+@if(type == buttonType.danger)
+{
+    typeClass = "button custom-button danger";
+}
+
+@if(type == buttonType.info)
+{
+    typeClass = "button custom-button info";
+}
+
+@if(type == buttonType.submit)
+{
+    typeClass = "button custom-button submit";
+}
+
+@if (type == buttonType.holographic)
+{
+    typeClass = "button custom-button holographic";
+}
+
+@if (type == buttonType.modern)
+{
+    typeClass = "button custom-button modern";
+}
+
+
+<Button class="@typeClass" id="@Id" onclick="@onClick">@text</Button>
+
+@code {
+    [Parameter]
+    public string text { get; set; }
+    [Parameter]
+    public string customCss { get; set; }
+    [Parameter]
+    public string Id { get; set; }
+    [Parameter]
+    public string onClick { get; set; }
+    [Parameter]
+    public buttonType type { get; set; }
+
+    public enum buttonType
+    {
+        info = 0,
+        danger = 1,
+        submit = 2,
+        holographic = 3,
+        modern = 4
+    }
+
+    private string typeClass;
+}

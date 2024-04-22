@@ -3,3 +3,106 @@
 *@
 @{
 }
+<link rel="stylesheet" href="~/css/pages/WebXR.css" />
+
+<div id="controls">
+    <button id="toggleVR" class="btn btn-info">Toggle VR</button>
+    <button id="toggleAR" class="btn btn-info">Toggle AR</button>
+    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Help With AR</button>
+</div>
+<div id="myEmbeddedScene">
+    <a-scene vr-mode-ui="enabled: true" ar-mode-ui="enabled: true" webxr="optionalFeatures: ['local-floor', 'bounded-floor', 'hit-test']" embedded>
+        <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</div>
+
+@* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="~/assets/QR/install_app.png" class="modal-image">
+                <p class="modal-text">Here is the first block of text appearing in the modal.</p>
+                <button type="button" class="btn btn-primary next">Next</button>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="~/assets/QR/install_app.png" class="modal-image" alt="Image 1">
+                <p class="modal-text">Here is the first block of text appearing in the modal.</p>
+                <button type="button" class="btn btn-primary next">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var baseUrl = '@Url.Content("~/")';
+</script>
+
+<script>
+    function adjustDivSize() {
+        var width = window.innerWidth; // Get the window's width
+        var height = window.innerHeight; // Get the window's height
+
+        // Set the dimensions of the div
+        var div = document.getElementById('myEmbeddedScene');
+        div.style.width = (width / 2) + 'px';
+        div.style.height = (height / 2) + 'px';
+    }
+
+    // Adjust the div size on page load
+    window.onload = adjustDivSize;
+
+    // Optional: Adjust the div size whenever the window is resized
+    window.onresize = adjustDivSize;
+
+
+    document.querySelector('#toggleVR').addEventListener('click', function () {
+        if (document.querySelector('a-scene').is('vr-mode')) {
+            document.querySelector('a-scene').exitVR();
+        } else {
+            document.querySelector('a-scene').enterVR();
+        }
+    });
+
+    document.querySelector('#toggleAR').addEventListener('click', function () {
+        // Check if AR is possible on this device
+        if (navigator.xr) {
+            // Attempt to use the AR features
+            navigator.xr.isSessionSupported('immersive-ar').then((supported) => {
+                if (supported) {
+                    if (document.querySelector('a-scene').is('ar-mode')) {
+                        document.querySelector('a-scene').exitAR();
+                    } else {
+                        document.querySelector('a-scene').enterAR();
+                    }
+                } else {
+                    alert('AR mode is not supported on your device or browser.');
+                }
+            }).catch((err) => {
+                alert('Error checking AR support: ' + err);
+            });
+        } else {
+            alert('WebXR not available, cannot enter AR mode.');
+        }
+    });
+</script>
+<script src="~/js/pages/WebXR.js"></script>

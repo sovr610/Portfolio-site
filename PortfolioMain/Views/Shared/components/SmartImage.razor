@@ -1,0 +1,54 @@
+﻿
+
+
+@if(imageQuality == QualityEnum.medium)
+{
+    lazyLoading = "auto";
+    decoding = "auto";
+    fetchPriority = "auto";
+}
+
+@if(imageQuality == QualityEnum.high)
+{
+    lazyLoading = "lazy";
+    decoding = "async";
+    fetchPriority = "high";
+}
+
+@if (isFigure)
+{
+    <figure>
+        <img src="@src" alt="@description" loading="@lazyLoading" decoding="@decoding" width="@width" height="@height" fetchpriority="@fetchPriority" />
+        <figcaption>@description</figcaption>    
+    </figure>
+} else
+{
+    <img src="@src" alt="@description" loading="@lazyLoading" decoding="@decoding" width="@width" height="@height" fetchpriority="@fetchPriority" />
+}
+
+@code {
+    [Parameter]
+    public string src { get; set; }
+    [Parameter]
+    public int width { get; set; }
+    [Parameter]
+    public int height { get; set; }
+    [Parameter]
+    public QualityEnum imageQuality { get; set; }
+    [Parameter]
+    public string? description { get; set; }
+    [Parameter]
+    public bool isFigure { get; set; }
+
+    private string lazyLoading = "eager";
+    private string decoding = "sync";
+    private string fetchPriority = "low";
+
+
+    public enum QualityEnum
+    {
+        low = 0,
+        medium = 1,
+        high = 2
+    }
+}

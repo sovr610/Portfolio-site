@@ -1,6 +1,42 @@
 ﻿#gameContainer {
-    width: 800px; /* Match the width of your Phaser game */
-    height: 600px; /* Match the height of your Phaser game */
+    width: 100%; /* Match the width of your Phaser game */
+    height: 100%; /* Match the height of your Phaser game */
     margin: auto; /* Center the game on the page */
     border: 1px solid #000; /* Optional border for visibility */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay {
+    width: 50%; /* Adjust width as needed */
+    height: 50%; /* Adjust height as needed */
+}
+
+.content {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 960px;
+    font-family: 'Arial', sans-serif; /* Clean and professional font choice */
+    color: #333; /* Soft, dark gray text color for readability */
+    line-height: 1.6; /* Spacing between lines */
+}
+
+    .content p {
+        text-align: justify; /* Justifies the text for a neat appearance */
+        margin-bottom: 16px; /* Adds space between paragraphs */
+    }
+
+h1, h2 {
+    text-align: center; /* Centers headings if included */
+    color: #0056b3; /* Stylish color choice for headings */
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 95%; /* Adjusts width for smaller screens */
+    }
 }

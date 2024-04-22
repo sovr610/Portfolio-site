@@ -38,6 +38,16 @@ namespace PortfolioMain.Controllers
             return View();
         }
 
+        public IActionResult Wafis()
+        {
+            return View();
+        }
+
+        public IActionResult pdf_viewer()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

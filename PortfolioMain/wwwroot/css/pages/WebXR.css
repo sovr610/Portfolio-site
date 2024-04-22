@@ -1,0 +1,75 @@
+﻿.modal-content .modal-body {
+    position: relative; /* Keeps elements within bounds of .modal-body */
+    height: auto; /* Adjust height to fit content */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.modal-image {
+    width: 128px; 
+    height: 128px; 
+    transition: transform 0.5s ease; 
+}
+
+.modal-text, .next {
+    position: static; 
+    transition: transform 0.5s ease;
+    display: block; 
+    margin-top: 20px; 
+}
+
+.hidden-left {
+    transform: translateX(-100%);
+    opacity: 0; 
+}
+
+.hidden-right {
+    transform: translateX(100%);
+    opacity: 0; 
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+#controls {
+    padding: 10px;
+    background: #f7f7f7; 
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+#myEmbeddedScene {
+    flex-grow: 1; /* Take up remaining space */
+    border: 1px solid #ccc; /* Optional border for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+    width: 1024px;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3); /* horizontal, vertical, blur, spread, color */
+}
+
+a-scene {
+    width: 100%; 
+    height: 100%; 
+}
+
+
+

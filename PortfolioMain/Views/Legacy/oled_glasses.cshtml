@@ -1,0 +1,134 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!-- Web fonts/Icons -->
+<link rel="stylesheet" href="~/Legacy/fonts/opensans/stylesheet.css">
+<link rel="stylesheet" href="~/Legacy/fonts/ionicons/ionicons.min.css">
+<link rel="stylesheet" href="~/Legacy/fonts/fontawesome/font-awesome.min.css">
+
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="~/Legacy/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/Legacy/js/lib/swiper.min.css">
+<link rel="stylesheet" href="~/Legacy/js/lib/jquery.fullpage.min.css">
+<link rel="stylesheet" href="~/Legacy/js/lib/vegas/vegas.min.css">
+
+<!-- Main CSS files -->
+<link rel="stylesheet" href="~/Legacy/css/style.css">
+
+<div class="pageloader" id="pageloader">
+    <div>
+        <div class="icon ion-spin"></div>
+    </div>
+</div>
+
+<style>
+    h5, h2, h3, p, li {
+        color: white;
+    }
+</style>
+
+<div class="page-main page-fullpage main-anim" id="itempage">
+    <div class="section section-twoside fp-auto-height-responsive section-item padding-none" data-section="item-alpha">
+        <div class="section-cover-tier mask-black"></div>
+        <div class="section-wrapper largewidth">
+            <div class="item row">
+                <div class="col-12 col-md-12 center-vh">
+                    <div class="section-content anim">
+                        <article class="article article-light">
+                            <div class="article-content">
+                                <div class="wrapper">
+                                    <h2>OLED Glasses</h2>
+                                    <div class="info-small">
+                                        <p><i class="icon ion-calendar"></i> March, 2, 2021</p>
+
+                                    </div>
+
+                                    <div class="item row justify-content-between mt-5">
+                                        <div class="col-12 col-md-12 col-lg-12">
+                                            <div class="section-content anim">
+                                                <div class="images text-center">
+                                                    <div class="img-frame-normal frame-small portrait">
+                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XBT_yJ687is" frameborder="0" title="OLED Augumented reality glasses" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Here is a hardware/software project I made using see-through OLED screens on sun glasses. There are two arduino's (coded in C++) with two batteries that are mounted on the glasses itself, to draw graphics on the two screens.</p>
+                                    <p>As of March 2022, I am currently in the process of making a more pratical AR glasses using OpenCV, C++ and raylib. raylib is a really nice 3D graphics library for game development and is used to generate the holograms in the AR glasses.</p>
+                                    <hr />
+                                    <h5>List of parts</h5>
+                                    <ul>
+                                        <li><a href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/">x2 raspberry pi zero 2 W + linux tiny core installed</a></li>
+                                        <li>x2 32GB micro SD cards</li>
+                                        <li>x2 raspberry pi zero cameras</li>
+                                        <li>3D printed glasses frame (Got a personal 3D printer)</li>
+                                        <li><a href="https://www.smart-prototyping.com/Project-North-Star-Single-Piece-Combiner-Set-v3_1SPC-Bad-Lens-Replacement">x1 semi-reflective lenses</a></li>
+                                        <li><a href="https://www.smart-prototyping.com/Display-for-Project-North-Star-3_5inch-1440x1600-pixels%20Promotion%20sale"> x2 3.5inch 1440RGB*1600 TFT-LCD Module</a></li>
+                                        <li><a href="https://www.tindie.com/products/pisugar/pisugar3-battery-for-raspberry-pi-zero/"> x2 piSugar 3 batteries</a></li>
+                                    </ul>
+                                    <img src="~/Legacy/img/parts-ar-glasses-1.jpg" alt="Parts to new AR glasses">
+                                    <br />
+                                    <h3>Current Status</h3><br />
+                                    <p>
+                                        Recently I ran a prototype in python running on ubuntu to detect hand movements and objects. I realized that the program was running well, but would be difficult to add in the raylib
+                                        code alongside the python code. So I decided to move over to C++ instead of python and to use tiny core linux OS to free up resources of the raspberry pi zero board.
+                                        Since there are two raspberry pi zero boards, the two main softwares will be split into a mini cluster, where the OpenCV code is on one raspberry pi and the raylib code is on
+                                        the other raspberry pi.
+                                    </p>
+                                    <p>
+                                        The goal is to write up a white paper on the project and to get a basic hologram system to work. The goal is to have floating windows and basic UI that can be interacted with your hands.
+                                        Doing this requires hand detection, object detection, text detection, and the raylib graphics library. For the vision detection algorithms, I will be using the darknet YOLOv4 neural
+                                        network model, alongside the haar system built into opencv for more basic things like your hands. To have a slim AR glasses to display apps, aid in finding people in a crowd,
+                                        or playing around with a holographic avatar for fun, is what I am  trying to build.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <footer class="article-footer">
+                            </footer>
+                        </article>
+
+                        <!--<div class="btns-action row item-buttons">
+                            <div class="col-md-12 item-buttons-next">
+                                <a class="btn btn-outline-white border-0" href="ai_terminal.html">
+                                    <i class="icon fa fa-arrow-circle-left mr-2"></i>
+                                    <span class="txt">Prev</span>
+                                </a>
+                                <a class="btn btn-outline-white border-0" href="opencv.html">
+                                    <span class="txt">Next</span>
+                                    <i class="icon fa fa-arrow-circle-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Content -->
+<!-- Start Footer -->
+<div id="site-footer" class="page-footer">
+    <!-- Left content -->
+    <div class="footer-left">
+        <span class="opacity-75"><i class="icon ion-android-call"></i>586-255-7640</span>
+        <span class="opacity-75"><i class="icon ion-email"></i>work.simpleintelligence@gmail.com</span>
+    </div>
+
+    <!-- Right content -->
+    <div class="footer-right">
+    </div>
+</div>
+<!-- End Footer  -->
+<!-- Scripts -->
+<script src="~/Legacy/js/lib/jquery-1.12.4.min.js"></script>
+<script src="~/Legacy/js/lib/scrolloverflow.min.js"></script>
+<script src="~/Legacy/js/lib/all.js"></script>
+<script src="~/Legacy/js/lib/particlejs/particles.min.js"></script>
+
+<!-- Main Script files -->
+<script src="~/Legacy/js/custom.js"></script>

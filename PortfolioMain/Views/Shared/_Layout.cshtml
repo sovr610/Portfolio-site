@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="~/PortfolioMain.styles.css" asp-append-version="true" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.5.0/dist/aframe-master.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/brain.js/2.0.0-beta.23/browser.min.js" integrity="sha512-TTQ2NTvo4PY2mKsEIUxo84FgORJVUTxw5uTmY3Y7k4zrcnkAaVT5W7aPvK04KE/yDxAOk4H4tCzJdS9ZnFsuZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+    <script src="~/js/lib/pdf.mjs" type="module"></script>
     <script src="~/lib/ajax-caller/AjaxCaller.js"></script>
 </head>
 <body>
@@ -37,13 +39,31 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WebXr">WebXr</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Wafis">Wafis (My Frontend Framework)</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="aframe_game">Aframe Game</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="ai_terminal">AI Terminal</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="JSPY">JSPY Terminal</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="NodeItem">NodeItem</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="oled_glasses">OLED Glasses</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="opencv">Opencv</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="ParkerScript">ParkerScript</a></li>
+
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3" id="main">
             @RenderBody()
         </main>
     </div>

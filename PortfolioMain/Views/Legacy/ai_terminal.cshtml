@@ -1,0 +1,238 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-sha256.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-base64.min.js"></script>
+
+<!-- Web fonts/Icons -->
+<link rel="stylesheet" href="~/Legacy/fonts/opensans/stylesheet.css">
+<link rel="stylesheet" href="~/Legacy/fonts/ionicons/ionicons.min.css">
+<link rel="stylesheet" href="~/Legacy/fonts/fontawesome/font-awesome.min.css">
+
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="~/Legacy/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/Legacy/js/lib/swiper.min.css">
+<link rel="stylesheet" href="~/Legacy/js/lib/jquery.fullpage.min.css">
+<link rel="stylesheet" href="~/Legacy/js/lib/vegas/vegas.min.css">
+
+<link rel="stylesheet" href="~/Legacy/css/style.css">
+
+<style type="text/css">
+    .terminal,
+    span,
+    .cmd,
+    div {
+        --color: rgba(0, 128, 0, 0.99);
+        --terminal-height: 300px;
+    }
+
+    .terminal,
+    span {
+        --size: 1.4;
+    }
+
+    #terminal {
+        --terminal-height: 300px;
+    }
+</style>
+
+<script>
+    var baseUrl = '@Url.Content("~/")';
+</script>
+
+<div class="pageloader" id="pageloader">
+    <div>
+        <div class="icon ion-spin"></div>
+    </div>
+</div>
+
+<h2>AI terminal</h2>
+<br />Type in "help" for commands
+<br />
+            To talk to the bot type <label style="font-weight:bold; text-decoration:underline">query "phrase"</label> with the phrase as your own question or response. Example: query "hey how are you". Scroll down to see how this AI works.
+<br />
+<br />
+<br />
+
+<div class="terminal-main" class="page-main page-fullpage main-anim" id="itempage" style="width: 100%; height:100%">
+    <div id="terminal" style="height:100%; width:100%"></div>
+</div>
+
+<div id="site-footer" class="page-footer">
+    <!-- Left content -->
+    <div class="footer-left">
+        <span class="opacity-75"><i class="icon ion-android-call"></i>1-586-255-7640</span>
+        <span class="opacity-75"><i class="icon ion-email"></i>work.simpleintelligence@gmail.com</span>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-7" style="height: 100vh; overflow: auto;" id="result">
+            <!--<img src="./resources/img/neural-network-LSTM.jpeg" alt="LSTM reccurent neural network design" />-->
+        </div>
+        <div class="col-5 text" style="color:chartreuse; height: 100vh; overflow: auto;">
+            <p>
+                Here we have a diagram of the type of neural network that this AI bot is using to communicate to you.
+                It is called a recurrent LSTM (Long Short-term Memory) Neural Network. The Framework being used is called
+                Brain.js which allows various different types of neural networks that also includes GPU powered libraries
+                to improve the training process.
+            </p>
+            <p>
+                The way I trained the model was done by a small project I made called <label style="font-weight: bold; text-decoration:underline">trainerBot</label>, which
+                collects the data as a json file, train the model and saves it to a file. Then this site loads the model file via fetch()
+                so the neural network doesn't need to train data each time it is opened.
+            </p>
+            <br />
+            <div class="item-buttons-purchase">
+                <a class="btn btn-secondary" target="_blank" href="https://github.com/sovr610/trainerBot">
+                    trainer bot Github
+                </a>
+            </div>
+
+        </div>
+
+        <!--<div class="btns-action row item-buttons">
+            <div class="col-md-12 item-buttons-next">
+                <a class="btn btn-outline-white border-0" href="aframe-game.html">
+                    <i class="icon fa fa-arrow-circle-left mr-2"></i>
+                    <span class="txt">Prev</span>
+                </a>
+                <a class="btn btn-outline-white border-0" href="oled_glasses.html">
+                    <span class="txt">Next</span>
+                    <i class="icon fa fa-arrow-circle-right ml-2"></i>
+                </a>
+            </div>
+        </div>-->
+        <!-- Right content -->
+        <div class="footer-right">
+        </div>
+</div>
+<!-- End Footer  -->
+<!-- Scripts -->
+    <script src="~/Legacy/js/lib/jquery-1.12.4.min.js"></script>
+<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <script src="~/Legacy/js/lib/scrolloverflow.min.js"></script>
+    <script src="~/Legacy/js/lib/all.js"></script>
+    <script src="~/Legacy/js/lib/particlejs/particles.min.js"></script>
+<script src="https://unpkg.com/js-polyfills/keyboard.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
+    <script src="~/Legacy/js/brain.js"></script>
+
+<!-- Main Script files -->
+    <script src="~/Legacy/js/custom.js"></script>
+<script>
+    var synth = window.speechSynthesis;
+    const config = {
+        binaryThresh: 0.5,
+        hiddenLayers: [3], // array of ints for the sizes of the hidden layers in the network
+        activation: 'sigmoid', // supported activation types: ['sigmoid', 'relu', 'leaky-relu', 'tanh'],
+        leakyReluAlpha: 0.01, // supported for activation type 'leaky-relu'
+    };
+
+    // create a simple feed forward neural network with backpropagation
+    const net = new brain.recurrent.LSTM();
+
+    var randHex = function (len) {
+        var maxlen = 8,
+            min = Math.pow(16, Math.min(len, maxlen) - 1)
+        max = Math.pow(16, Math.min(len, maxlen)) - 1,
+            n = Math.floor(Math.random() * (max - min + 1)) + min,
+            r = n.toString(16);
+        while (r.length < len) {
+            r = r + randHex(len - maxlen);
+        }
+        return r;
+    };
+    var rand = randHex(7);
+    async function HMAC(key, message) {
+        const g = str => new Uint8Array([...unescape(encodeURIComponent(str))].map(c => c.charCodeAt(0))),
+            k = g(key),
+            m = g(message),
+            c = await crypto.subtle.importKey('raw', k, {
+                name: 'HMAC',
+                hash: 'SHA-256'
+            }, true, ['sign']),
+            s = await crypto.subtle.sign('HMAC', c, m);
+        [...new Uint8Array(s)].map(b => b.toString(16).padStart(2, '0')).join('');
+        return btoa(String.fromCharCode(...new Uint8Array(s)))
+    }
+
+
+    /* TODO commands:
+        - talk -> talks to the AI like a person
+        - run -> runs a line of javascript
+        - help -> give list of commands
+    */
+    var obj = $('body').find('#terminal');
+    //train()
+    fetch(baseUrl + 'Legacy/models/model.json')
+        .then(response => response.json())
+        .then((data) => {
+            console.log(data);
+
+            net.fromJSON(data);
+
+            document.getElementById('result').innerHTML = brain.utilities.toSVG(
+                net,
+                {
+                    height: '500',
+                    width: '650',
+                    radius: '10',
+                    line: {
+                        width: '0.2',
+                        color: 'rgba(100,149,237,0.5)'
+                    }
+                    /*inputs:{
+                       */
+                }
+            );
+            $(obj).terminal({
+
+                help: function () {
+                    this.echo(
+                        'query "phrase" -> this is for talking to the AI, phrase is any phrase or question to the AI'
+                    );
+                    this.echo('version -> get the version number');
+                },
+                version: function () {
+                    this.echo('v0.1.0.6');
+                },
+                query: function (phrase) {
+                    console.log(phrase);
+
+                    var check = false;
+
+                    function formatDate(date, format) {
+                        const map = {
+                            mm: date.getMonth() + 1,
+                            dd: date.getDate(),
+                            yy: date.getFullYear().toString().slice(-2),
+                            yyyy: date.getFullYear()
+                        }
+
+                        return format.replace(/mm|dd|yy|yyy/gi, matched => map[matched])
+                    }
+
+                    if (phrase.trim().toLowerCase().includes("what is the date")) {
+                        check = true;
+                        result = formatDate(Date.now(), 'mm/dd/yy');
+                    }
+                    var result = null;
+
+                    if (check == false) {
+                        result = net.run(phrase);
+                    }
+                    this.echo(result);
+                    var utterThis = new SpeechSynthesisUtterance(result);
+                    synth.speak(utterThis);
+                }
+            }, {
+                greetings: 'brain.js neural network chatbot!',
+                height: 600
+            });
+        });
+</script>
