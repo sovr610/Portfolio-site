@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8HbiZ10kPmsfSFCBHKtPLuU+8pPPA++4PD2umZQAgj2VWv4Cw0qXuyqAOu3F2dS8wFVBZosF5FYArGxYftWDDg==",
+  "dgSpecHash": "bsUqM3QawDcEdp8+PFHKz6w/uLu2Frg+feriAFT8rUiOoFjZj5KNnwHL4AhwZuX2wpfa3Gwr+ehJjtGCfztUag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\new_portfolio\\PortfolioMain\\PortfolioMain\\PortfolioMain.csproj",
+  "projectFilePath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\PortfolioMain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sovr6\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Sovr6\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"

@@ -150,11 +150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\new_portfolio\\PortfolioMain\\PortfolioMain\\PortfolioMain.csproj",
+      "projectUniqueName": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\PortfolioMain.csproj",
       "projectName": "PortfolioMain",
-      "projectPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\new_portfolio\\PortfolioMain\\PortfolioMain\\PortfolioMain.csproj",
+      "projectPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\PortfolioMain.csproj",
       "packagesPath": "C:\\Users\\Sovr6\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\new_portfolio\\PortfolioMain\\PortfolioMain\\obj\\",
+      "outputPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

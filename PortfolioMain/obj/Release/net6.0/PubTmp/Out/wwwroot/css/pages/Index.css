@@ -113,14 +113,44 @@ a {
 }
 
 .card {
-    width: 350px; /* Width of cards */
-    height: 375px; /* Height of cards */
+    width: 18vw;
+    height: 40.5vw;
     perspective: 1000px;
     position: relative;
     transition: background-color 1.0s ease;
 }
 
+.card-back::-webkit-scrollbar {
+    width: 5px; /* Scrollbar width */
+}
 
+.card-back::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1); /* Track color */
+}
+
+.card-back::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.6); /* Thumb color, semi-transparent white */
+    border-radius: 10px;
+    border: 1px solid transparent; /* Optional: can add border to the thumb */
+}
+
+    .card-back::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255,255,255,0.8); /* Thumb color on hover */
+    }
+
+@media (max-width: 768px) {
+    .card {
+        width: 30vw; /* Larger cards on smaller screens */
+        height: 45vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 45vw;
+        height: 67.5vw;
+    }
+}
 
 .card-front, .card-back {
     width: 100%;
@@ -145,6 +175,8 @@ a {
 .card-back {
     transform: rotateY(180deg);
     z-index: 1;
+    overflow: auto; /* Enables scrolling */
+    padding: 10px; /* Adds some padding inside the card */
 }
 
 .card.flipped .card-front {
