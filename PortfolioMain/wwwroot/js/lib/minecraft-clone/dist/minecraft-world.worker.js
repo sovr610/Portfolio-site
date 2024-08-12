@@ -1,0 +1,1 @@
+(()=>{importScripts("TerrainGenerator.js");const n=new TerrainGenerator;self.onmessage=function(e){const{action:t,chunkX:a,chunkZ:c}=e.data;if("generateChunk"===t){const e=n.generateChunk(a,c);self.postMessage({action:"chunkGenerated",chunkX:a,chunkZ:c,chunk:e})}}})();

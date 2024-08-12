@@ -1,5 +1,37 @@
-﻿@{
+﻿@using SeoTags
+@{
     ViewData["Title"] = "Home Page";
+}
+
+@{
+    Html.SetSeoInfo(seoInfo =>
+    {
+        seoInfo.SetCommonInfo(
+            "Parker Bidigare - Home",
+            "My Personal Portfolio website. Here I show off AI, web design, vision processing, AR/VR, and my front-end framework wafis alongside much more.",
+            "https://site.com/url/",
+            new[] { "Wafis", "AI", "Automation", "artificial intelligence", "smart device", "C#", "software", "Javascript", "parker bidigare", "asp.net", "tech", "typescript", "portfolio", "opencv", "neural network", "machine learning", "assistant", "like human", "robotics", "science", "Java", "apps", "service", "code", "dotnet", "python", "cybersecurity", "conscious", "tranforming", "world" },
+            new[] { "https://www.parkerbidigare.com/Home/AboutMe", "https://www.parkerbidigare.com/Home/LLM", "https://www.parkerbidigare.com/Home/Wafis", "https://www.parkerbidigare.com/Home/WebXR", "https://www.parkerbidigare.com/Legacy/ai_terminal", "https://www.parkerbidigare.com/Legacy/JSPY", "https://www.parkerbidigare.com/Legacy/NodeItem", "https://www.parkerbidigare.com/Legacy/oled_glasses", "https://www.parkerbidigare.com/Legacy/ParkerScript" });
+
+        seoInfo.SetImageInfo(
+            "~/assets/profile-pic.jpg",
+            640,
+            640,
+            "Parker Bidigare Portfolio Site",
+            //mimeType: "image/jpeg", //optional: detect from url file extension
+            cardType: TwitterCardType.SummaryLargeImage);
+
+        seoInfo.SetArticleInfo(
+            "Parker Bidigare - Portfolio Site",
+            DateTimeOffset.Now,
+            DateTimeOffset.Now,
+            "@ParkerBidigare",
+            "https://www.facebook.com/parker.sovr/",
+            "https://github.com/sovr610",
+            "SEO");
+
+        //seoInfo.AddFeed("Post Comments", "https://site.com/post/comment/rss", FeedType.Rss);
+    });
 }
 
 <link rel="stylesheet" href="~/css/pages/Index.css" />
@@ -17,7 +49,6 @@
         <p>Senior Software Engineer</p>
     </div>
 </div>
-
 
 <section id="bio">
     <h2>Introduction</h2>
@@ -41,11 +72,11 @@
     <h2>Skillsets</h2><br/>
     <h5>Click on each card to flip them</h5>
     <div class="card-container">
-        <div class="card" data-color="#b993bf">
-            <div class="card-front">
+        <div class="card " data-color="#b993bf" >
+            <div class="card-front color-languages">
                 Programming Languages & Web<br />
             </div>
-            <div class="card-back">
+            <div class="card-back color-languages">
                 <ul>
                     <li>C Sharp (C#)</li>
                     <li>VB.NET</li>
@@ -57,11 +88,11 @@
                 </ul>
             </div>
         </div>
-        <div class="card" data-color="#93c3c4">
-            <div class="card-front">
+        <div class="card " data-color="#93c3c4">
+            <div class="card-front color-frameworks">
                 Frameworks & Runtimes<br />
             </div>
-            <div class="card-back">
+            <div class="card-back color-frameworks">
                 <ul>
                     <li>.NET/ASP.NET</li>
                     <li>Spring Boot/Maven</li>
@@ -72,11 +103,11 @@
                 </ul>
             </div>
         </div>
-        <div class="card" data-color="#d8eda4">
-            <div class="card-front">
+        <div class="card " data-color="#d8eda4">
+            <div class="card-front color-tools">
                 Tools & Libraries<br />
             </div>
-            <div class="card-back">
+            <div class="card-back color-tools">
                 <ul>
                     <li>Visual Studio</li>
                     <li>SQL Server management services (SSMS)</li>
@@ -110,6 +141,12 @@
             </div>
         </div>-->
     </div>
+</section>
+
+<section id="socials">
+    <h2>Social media Accounts</h2>
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="parker-bidigare" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/parker-bidigare?trk=profile-badge">Parker Bidigare Linkedin profile</a></div>
+
 </section>
 
 

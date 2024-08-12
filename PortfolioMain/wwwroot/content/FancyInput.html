@@ -1,0 +1,107 @@
+﻿<template id="fancy-input-template">
+    <style>
+        .fancy-input-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .fancy-input {
+            padding: 10px;
+            border: 2px solid #3f51b5;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+
+            .fancy-input:focus {
+                outline: none;
+                border-color: #303f9f;
+                box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+            }
+
+        .fancy-input-label {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .fancy-input:focus + .fancy-input-label,
+        .fancy-input:not(:placeholder-shown) + .fancy-input-label {
+            top: -20px;
+            left: 5px;
+            font-size: 12px;
+            color: #3f51b5;
+        }
+    </style>
+    <div class="fancy-input-container">
+        <input type="text" class="fancy-input" placeholder=" ">
+        <label class="fancy-input-label"></label>
+    </div>
+</template>
+
+<script>
+    class FancyInput extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+            this.input = this.shadowRoot.querySelector('.fancy-input');
+            this.label = this.shadowRoot.querySelector('.fancy-input-label');
+
+            this.input.addEventListener('input', this.handleInput.bind(this));
+            this.input.addEventListener('focus', this.handleFocus.bind(this));
+            this.input.addEventListener('blur', this.handleBlur.bind(this));
+        }
+
+        static get observedAttributes() {
+            return ['placeholder', 'value', 'label'];
+        }
+
+        attributeChangedCallback(name, oldValue, newValue) {
+            switch (name) {
+                case 'placeholder':
+                    this.input.placeholder = newValue;
+                    break;
+                case 'value':
+                    this.input.value = newValue;
+                    break;
+                case 'label':
+                    this.label.textContent = newValue;
+                    break;
+            }
+        }
+
+        handleInput(event) {
+            this.dispatchEvent(new CustomEvent('fancy-input', {
+                bubbles: true,
+                composed: true,
+                detail: { value: event.target.value }
+            }));
+        }
+
+        handleFocus() {
+            this.shadowRoot.querySelector('.fancy-input-container').classList.add('focused');
+        }
+
+        handleBlur() {
+            this.shadowRoot.querySelector('.fancy-input-container').classList.remove('focused');
+        }
+
+        // Getter and setter for value
+        get value() {
+            return this.input.value;
+        }
+
+        set value(newValue) {
+            this.input.value = newValue;
+        }
+    }
+
+    customElements.define('fancy-input', FancyInput);
+</script>

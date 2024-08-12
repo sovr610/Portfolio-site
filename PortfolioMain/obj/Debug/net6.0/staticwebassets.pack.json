@@ -1129,6 +1129,570 @@
       "PackagePath": "staticwebassets\\Legacy\\video\\oled.MP4"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\alias.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\alias.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\alias_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\alias_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\all-scroll.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\all-scroll.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\all-scroll_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\all-scroll_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_left_corner.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_left_corner.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_left_corner_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_left_corner_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_right_corner.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_right_corner.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_right_corner_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_right_corner_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_side.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_side.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_side_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\bottom_side_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\cell.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\cell.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\cell_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\cell_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\center_ptr.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\center_ptr.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\center_ptr_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\center_ptr_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\col-resize.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\col-resize.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\col-resize_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\col-resize_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\color-picker.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\color-picker.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\color-picker_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\color-picker_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\context-menu.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\context-menu.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\context-menu_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\context-menu_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\copy.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\copy.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\copy_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\copy_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\crosshair.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\crosshair.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\crosshair_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\crosshair_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\default.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\default.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\default_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\default_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-move.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-move.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-move_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-move_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-no-drop.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-no-drop.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-no-drop_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\dnd-no-drop_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\down-arrow.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\down-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\down-arrow_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\down-arrow_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\draft.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\draft.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\draft_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\draft_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\filenames.txt",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\filenames.txt"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\fleur.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\fleur.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\fleur_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\fleur_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\help.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\help.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\help_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\help_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\index.theme",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\index.theme"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left-arrow.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left-arrow_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left-arrow_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left_side.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left_side.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left_side_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\left_side_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\no-drop.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\no-drop.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\no-drop_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\no-drop_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\not-allowed.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\not-allowed.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\not-allowed_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\not-allowed_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\openhand.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\openhand.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\openhand_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\openhand_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pencil.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pencil.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pencil_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pencil_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pirate.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pirate.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pirate_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pirate_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pointer.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pointer.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pointer_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\pointer_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-01.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-01_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-01_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-02.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-02.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-02_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-02_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-03.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-03.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-03_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-03_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-04.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-04.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-04_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-04_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-05.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-05.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-05_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-05_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-06.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-06.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-06_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-06_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-07.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-07.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-07_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-07_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-08.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-08.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-08_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-08_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-09.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-09.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-09_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-09_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-10.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-10.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-10_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-10_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-11.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-11.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-11_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-11_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-12.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-12.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-12_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\progress-12_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\read-filenames.py",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\read-filenames.py"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right-arrow.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right-arrow_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right-arrow_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_ptr.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_ptr.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_ptr_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_ptr_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_side.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_side.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_side_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\right_side_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\row-resize.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\row-resize.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\row-resize_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\row-resize_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_bdiag.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_bdiag.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_bdiag_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_bdiag_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_fdiag.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_fdiag.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_fdiag_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_fdiag_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_hor.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_hor.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_hor_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_hor_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_ver.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_ver.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_ver_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\size_ver_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\text.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\text.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\text_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\text_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_left_corner.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_left_corner.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_left_corner_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_left_corner_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_right_corner.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_right_corner.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_right_corner_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_right_corner_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_side.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_side.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_side_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\top_side_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\up-arrow.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\up-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\up-arrow_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\up-arrow_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\vertical-text.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\vertical-text.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\vertical-text_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\vertical-text_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-01.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-01_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-01_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-02.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-02.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-02_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-02_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-03.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-03.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-03_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-03_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-04.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-04.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-04_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-04_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-05.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-05.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-05_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-05_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-06.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-06.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-06_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-06_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-07.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-07.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-07_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-07_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-08.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-08.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-08_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-08_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-09.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-09.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-09_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-09_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-10.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-10.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-10_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-10_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-11.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-11.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-11_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-11_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-12.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-12.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-12_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wait-12_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wayland-cursor.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wayland-cursor.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wayland-cursor_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\wayland-cursor_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\x-cursor.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\x-cursor.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\x-cursor_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\x-cursor_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-in.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-in.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-in_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-in_24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-out.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-out.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-out_24.svg",
+      "PackagePath": "staticwebassets\\assets\\Cursors\\catppuccin-frappe-red-cursors\\zoom-out_24.svg"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\GitHub-logo.png",
       "PackagePath": "staticwebassets\\assets\\GitHub-logo.png"
     },
@@ -1139,6 +1703,82 @@
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\QR\\website_webxr_url.png",
       "PackagePath": "staticwebassets\\assets\\QR\\website_webxr_url.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\block_textures\\COAL_ORE.png",
+      "PackagePath": "staticwebassets\\assets\\block_textures\\COAL_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\block_textures\\DIAMOND_ORE.png",
+      "PackagePath": "staticwebassets\\assets\\block_textures\\DIAMOND_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\block_textures\\GOLD_ORE.png",
+      "PackagePath": "staticwebassets\\assets\\block_textures\\GOLD_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\block_textures\\IRON_ORE.png",
+      "PackagePath": "staticwebassets\\assets\\block_textures\\IRON_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\block_textures\\LAVA_TEXTURE.png",
+      "PackagePath": "staticwebassets\\assets\\block_textures\\LAVA_TEXTURE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\block_textures\\STALACTITE_TEXTURE.png",
+      "PackagePath": "staticwebassets\\assets\\block_textures\\STALACTITE_TEXTURE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\games\\minecraft-world.png",
+      "PackagePath": "staticwebassets\\assets\\games\\minecraft-world.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\images\\cyberpunk.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cyberpunk.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\images\\outdoors.png",
+      "PackagePath": "staticwebassets\\assets\\images\\outdoors.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\images\\solar-punk.png",
+      "PackagePath": "staticwebassets\\assets\\images\\solar-punk.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\images\\webconsole-qr.png",
+      "PackagePath": "staticwebassets\\assets\\images\\webconsole-qr.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\movies\\web-console.MP4",
+      "PackagePath": "staticwebassets\\assets\\movies\\web-console.MP4"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\Heroes Rise.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\Heroes Rise.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\Neon Dreams.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\Neon Dreams.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\Sunlit Serenade.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\Sunlit Serenade.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\blade-runner.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\blade-runner.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\calm cyberpunk 2.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\calm cyberpunk 2.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\cyberpunk-calm.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\cyberpunk-calm.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\intro.mp3",
+      "PackagePath": "staticwebassets\\assets\\music\\intro.mp3"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\music\\song-1.mp3",
@@ -1169,12 +1809,24 @@
       "PackagePath": "staticwebassets\\assets\\npm_icon.png"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\porfile-pic.jpeg",
+      "PackagePath": "staticwebassets\\assets\\porfile-pic.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\profile.jpg",
       "PackagePath": "staticwebassets\\assets\\profile.jpg"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\resume-current.pdf",
       "PackagePath": "staticwebassets\\assets\\resume-current.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3",
+      "PackagePath": "staticwebassets\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\sounds\\metal-whoosh-hit-9-201909.mp3",
+      "PackagePath": "staticwebassets\\assets\\sounds\\metal-whoosh-hit-9-201909.mp3"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\textures\\Wizard Pack\\Attack1.png",
@@ -1213,6 +1865,10 @@
       "PackagePath": "staticwebassets\\assets\\textures\\computers\\ibm5150_animated.gif"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\textures\\enemy\\green-virus.png",
+      "PackagePath": "staticwebassets\\assets\\textures\\enemy\\green-virus.png"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\textures\\floor.jpeg",
       "PackagePath": "staticwebassets\\assets\\textures\\floor.jpeg"
     },
@@ -1237,6 +1893,22 @@
       "PackagePath": "staticwebassets\\assets\\wafis-logo-small.jpg"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\FancyInput.html",
+      "PackagePath": "staticwebassets\\content\\FancyInput.html"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\Projects.html",
+      "PackagePath": "staticwebassets\\content\\Projects.html"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\Themes\\CRT\\crt.css",
+      "PackagePath": "staticwebassets\\css\\Themes\\CRT\\crt.css"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\Themes\\CyberPunk\\cyberpunk.min.css",
+      "PackagePath": "staticwebassets\\css\\Themes\\CyberPunk\\cyberpunk.min.css"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\AboutMe.css",
       "PackagePath": "staticwebassets\\css\\pages\\AboutMe.css"
     },
@@ -1251,6 +1923,10 @@
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\WebXR.css",
       "PackagePath": "staticwebassets\\css\\pages\\WebXR.css"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\home.css",
+      "PackagePath": "staticwebassets\\css\\pages\\home.css"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\pdf_viewer.css",
@@ -1269,8 +1945,104 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader.js",
+      "PackagePath": "staticwebassets\\js\\lib\\ComponentLoader.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader_old.js",
+      "PackagePath": "staticwebassets\\js\\lib\\ComponentLoader_old.js"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\debugger.mjs",
       "PackagePath": "staticwebassets\\js\\lib\\debugger.mjs"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\games.js",
+      "PackagePath": "staticwebassets\\js\\lib\\games.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\llmChat.js",
+      "PackagePath": "staticwebassets\\js\\lib\\llmChat.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\ChunkLoader.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\ChunkLoader.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\ChunkWorker.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\ChunkWorker.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\MinecraftSky.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\MinecraftSky.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\MinecraftWorld.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\MinecraftWorld.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\TerrainGenerator.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\TerrainGenerator.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\assets\\block_textures\\COAL_ORE.png",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\assets\\block_textures\\COAL_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\assets\\block_textures\\DIAMOND_ORE.png",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\assets\\block_textures\\DIAMOND_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\assets\\block_textures\\GOLD_ORE.png",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\assets\\block_textures\\GOLD_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\assets\\block_textures\\IRON_ORE.png",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\assets\\block_textures\\IRON_ORE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\assets\\block_textures\\LAVA_TEXTURE.png",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\assets\\block_textures\\LAVA_TEXTURE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\assets\\block_textures\\STALACTITE_TEXTURE.png",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\assets\\block_textures\\STALACTITE_TEXTURE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\dist\\874.minecraft-world.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\dist\\874.minecraft-world.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\dist\\minecraft-world.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\dist\\minecraft-world.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\dist\\minecraft-world.worker.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\dist\\minecraft-world.worker.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\example.html",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\example.html"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\example_old.html",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\example_old.html"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\package-lock.json",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\package.json",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\minecraft-clone\\webpack.config.js",
+      "PackagePath": "staticwebassets\\js\\lib\\minecraft-clone\\webpack.config.js"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\pdf.mjs",
@@ -1299,6 +2071,10 @@
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\WebXR.js",
       "PackagePath": "staticwebassets\\js\\pages\\WebXR.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\home.js",
+      "PackagePath": "staticwebassets\\js\\pages\\home.js"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\index.mjs",

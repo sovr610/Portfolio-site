@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Minecraft-like World in A-Frame</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@3f0df33946cf12e3d552b3b4e500dd5b8ff6f692/dist/aframe-master.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+
+    <script src="./dist/minecraft-world.js"></script>
+    <style>
+      #debug {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 12px;
+        pointer-events: none;
+      }
+      #blockType {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        font-family: sans-serif;
+        font-size: 16px;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity id="rig" position="0 80 0" wasd-controls look-controls>
+        <a-camera>
+          <a-cursor></a-cursor>
+        </a-camera>
+      </a-entity>
+
+      <a-sky color="#87CEEB"></a-sky>
+
+      <a-entity id="minecraft-world"></a-entity>
+
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
+    </a-scene>
+
+    <div id="debug"></div>
+    <div id="blockType">Current Block: GRASS</div>
+
+    <script>
+      // Wait for the A-Frame scene to load before setting up our component
+      window.addEventListener('load', function () {
+        AFRAME.registerComponent('minecraft-world', {
+          init: function() {
+            this.minecraftWorld = new MinecraftWorld.default({
+              chunkSize: 16,
+              worldHeight: 128,
+              renderDistance: 4,
+              blockSize: 1
+            });
+
+            // Wait for the camera to be set up
+            this.el.sceneEl.addEventListener('camera-set-active', () => {
+              const scene = this.el.sceneEl.object3D;
+              const camera = this.el.sceneEl.camera;
+              this.minecraftWorld.init(scene, camera);
+
+              // Add block types
+              const blockTypes = [
+                { name: 'AIR', color: '#FFFFFF', opacity: 0 },
+                { name: 'GRASS', color: '#567D46' },
+                { name: 'DIRT', color: '#8B4513' },
+                { name: 'STONE', color: '#808080' },
+                { name: 'WATER', color: '#0000FF', opacity: 0.5 },
+                { name: 'SAND', color: '#F4A460' },
+                { name: 'GRAVEL', color: '#696969' },
+                { name: 'SNOW', color: '#FFFAFA' },
+                { name: 'LOG', color: '#8B4513' },
+                { name: 'LEAVES', color: '#228B22' },
+                { name: 'FLOWER', color: '#FF69B4' },
+                { name: 'LAVA', color: '#FF4500' },
+                { name: 'DIAMOND_ORE', color: '#B9F2FF' },
+                { name: 'GOLD_ORE', color: '#FFD700' },
+                { name: 'IRON_ORE', color: '#CDC1C5' },
+                { name: 'COAL_ORE', color: '#333333' },
+                { name: 'STALAGMITE', color: '#A9A9A9' },
+                { name: 'STALACTITE', color: '#A9A9A9' }
+              ];
+
+              blockTypes.forEach(block => {
+                this.minecraftWorld.addBlockType({
+                  name: block.name,
+                  material: { 
+                    color: block.color,
+                    opacity: block.opacity !== undefined ? block.opacity : 1
+                  }
+                });
+              });
+
+              // Set up player position update
+              this.playerEl = document.querySelector('#rig');
+              this.camera = document.querySelector('a-camera');
+
+              // Set up block placement
+              this.blockTypes = blockTypes.map(block => block.name);
+              this.currentBlockIndex = 1; // Start with GRASS
+              this.el.sceneEl.addEventListener('click', this.placeBlock.bind(this));
+
+              // Set up block type toggle
+              document.addEventListener('keydown', (event) => {
+                if (event.key === 'b' || event.key === 'B') {
+                  this.toggleBlockType();
+                }
+              });
+
+              debug('MinecraftWorld component initialized');
+            });
+          },
+
+          tick: function(time, timeDelta) {
+            try {
+              if (this.minecraftWorld && this.minecraftWorld.camera) {
+                // Update MinecraftWorld on each frame
+                this.minecraftWorld.update(time);
+
+                // Update player position in MinecraftWorld
+                const position = this.playerEl.getAttribute('position');
+                this.minecraftWorld.updatePlayerPosition(position.x, position.y, position.z);
+
+                // Debug output
+                debug(`Player position: ${position.x.toFixed(2)}, ${position.y.toFixed(2)}, ${position.z.toFixed(2)}`);
+              }
+            } catch (error) {
+              console.error('Error in minecraft-world tick:', error);
+              debug('Error in minecraft-world tick: ' + error.message);
+            }
+          },
+
+          placeBlock: function(event) {
+            const camera = this.camera.components.camera.camera;
+            const raycaster = new THREE.Raycaster();
+            raycaster.setFromCamera(new THREE.Vector2(), camera);
+
+            const intersects = raycaster.intersectObjects(this.minecraftWorld.scene.children, true);
+
+            if (intersects.length > 0) {
+              const intersectionPoint = intersects[0].point;
+              const normal = intersects[0].face.normal;
+
+              const blockX = Math.floor(intersectionPoint.x + normal.x * 0.5);
+              const blockY = Math.floor(intersectionPoint.y + normal.y * 0.5);
+              const blockZ = Math.floor(intersectionPoint.z + normal.z * 0.5);
+
+              const currentBlockType = this.blockTypes[this.currentBlockIndex];
+              this.minecraftWorld.setBlock(blockX, blockY, blockZ, currentBlockType);
+              debug(`Placed ${currentBlockType} block at ${blockX}, ${blockY}, ${blockZ}`);
+            }
+          },
+
+          toggleBlockType: function() {
+            this.currentBlockIndex = (this.currentBlockIndex + 1) % this.blockTypes.length;
+            const currentBlockType = this.blockTypes[this.currentBlockIndex];
+            document.getElementById('blockType').textContent = `Current Block: ${currentBlockType}`;
+          }
+        });
+
+        // Add the minecraft-world component to the minecraft-world entity
+        document.querySelector('#minecraft-world').setAttribute('minecraft-world', '');
+      });
+
+      // Debug logging function
+      function debug(message) {
+        const debugElement = document.getElementById('debug');
+        if (debugElement) {
+          debugElement.innerHTML = message;
+        }
+        console.log(message);
+      }
+
+      // Example debug message
+      debug('A-Frame scene loaded');
+    </script>
+  </body>
+</html>

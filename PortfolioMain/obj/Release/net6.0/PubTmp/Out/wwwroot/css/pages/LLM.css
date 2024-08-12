@@ -41,7 +41,8 @@
 }
 
 .chat-log {
-    height: 200px;
+    height: 500px;
+    width: 100%;
     overflow-y: auto;
     background-color: #555;
     padding: 5px;
@@ -49,7 +50,7 @@
 }
 
 .chat-input {
-    width: 70%;
+    width: 100%;
     padding: 10px;
     margin-right: 10px;
     color: black;
@@ -90,3 +91,52 @@
     text-align: right;
 }
 
+
+.caht-log::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.chat-log::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 0.2rem;
+}
+
+.chat-log::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 0.2rem;
+}
+
+    .chat-log::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+.bubble {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    padding: 10px;
+}
+
+.user1 {
+    align-self: flex-start;
+    background-color: #7289da;
+    color: #f2f2f2;
+}
+
+.user2 {
+    align-self: flex-end;
+    background-color: #333333;
+    color: #f2f2f2;
+}
+
+.text {
+    margin: 0;
+}
+
+.chatbox {
+    border: 1px solid #333333;
+    margin-bottom: 30px;
+    max-height: 500px;
+    overflow-y: scroll;
+    padding: 10px;
+}

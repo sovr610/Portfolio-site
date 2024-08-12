@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PortfolioMain.interfaces;
 using PortfolioMain.Models;
+using Serilog;
 using System.Text;
 
 namespace portfolio.Logic
@@ -12,7 +13,12 @@ namespace portfolio.Logic
         public APIhub()
         {
             HttpClient = new HttpClient();
-            HttpClient.BaseAddress = new Uri("http://localhost:3500");
+            HttpClient.BaseAddress = new Uri("http://162.255.87.173:3500");
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .WriteTo.File("logs\\APIhub.txt")
+                .CreateLogger();
         }
 
         public async Task<string> getOpenAIResponse(string prompt)
@@ -24,10 +30,13 @@ namespace portfolio.Logic
                 string data = JsonConvert.SerializeObject(llm);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
                 var response = HttpClient.PostAsync("/llm", content).Result;
-                return await response.Content.ReadAsStringAsync();
+                string results = await response.Content.ReadAsStringAsync();
+                Log.Information("Got response from /llm: " + results);
+                return results;
             }
             catch(Exception e)
             {
+                Log.Error(e, "Open AI response issue");
                 return "Error - " + e.Message;
             }
         }
@@ -41,10 +50,13 @@ namespace portfolio.Logic
                 string data = JsonConvert.SerializeObject(llm);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
                 var response = HttpClient.PostAsync("/nlp", content).Result;
-                return await response.Content.ReadAsStringAsync();
+                string results = await response.Content.ReadAsStringAsync();
+                Log.Information("Got response from /nlp" + results);
+                return results;
             }
             catch (Exception e)
             {
+                Log.Error(e, "NLP response issue");
                 return "Error - " + e.Message;
             }
         }

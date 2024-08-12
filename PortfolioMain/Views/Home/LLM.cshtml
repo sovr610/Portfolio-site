@@ -1,4 +1,5 @@
-﻿
+﻿@using SeoTags
+
 
 <style>
     #model-summary {
@@ -14,9 +15,40 @@
     <button class="tablinks" onclick="openTab(event, 'Intro')" id="defaultOpen">Introduction</button>
     <button class="tablinks" onclick="openTab(event, 'NLPchatbot')">NLP chatbot</button>
     <button class="tablinks" onclick="openTab(event, 'brainjsChatBot')">brain.js Chatbot</button>
-    <!--<button class="tablinks" onclick="openTab(event, 'Bertchatbot')">Bert ONNX chatbot</button>-->
+    <button class="tablinks" onclick="openTab(event, 'Bertchatbot')">Bert ONNX chatbot</button>
     <button class="tablinks" onclick="openTab(event, 'ChatGPT4')">ChatGPT4 Langchain chatbot</button>
 </div>
+
+@{
+    Html.SetSeoInfo(seoInfo =>
+    {
+        seoInfo.SetCommonInfo(
+            "Parker Bidigare - LLM",
+            "My Personal Portfolio website. Here is a history of chatbots from NLP algorthims to full on LLM's using RAG",
+            "https://site.com/url/",
+            new[] { "Wafis", "AI", "Automation", "artificial intelligence", "smart device", "C#", "software", "Javascript", "parker bidigare", "asp.net", "tech", "typescript", "portfolio", "opencv", "neural network", "machine learning", "assistant", "like human", "robotics", "science", "Java", "apps", "service", "code", "dotnet", "python", "cybersecurity", "conscious", "tranforming", "world" },
+            new[] { "https://www.parkerbidigare.com/Home/AboutMe", "https://www.parkerbidigare.com/Home/LLM", "https://www.parkerbidigare.com/Home/Wafis", "https://www.parkerbidigare.com/Home/WebXR", "https://www.parkerbidigare.com/Legacy/ai_terminal", "https://www.parkerbidigare.com/Legacy/JSPY", "https://www.parkerbidigare.com/Legacy/NodeItem", "https://www.parkerbidigare.com/Legacy/oled_glasses", "https://www.parkerbidigare.com/Legacy/ParkerScript" });
+
+        seoInfo.SetImageInfo(
+            "~/assets/profile-pic.jpg",
+            640,
+            640,
+            "Parker Bidigare Portfolio Site",
+            mimeType: "image/jpeg", //optional: detect from url file extension
+            cardType: TwitterCardType.SummaryLargeImage);
+
+        seoInfo.SetArticleInfo(
+            "Parker Bidigare - Portfolio Site",
+            DateTimeOffset.Now,
+            DateTimeOffset.Now,
+            "@ParkerBidigare",
+            "https://www.facebook.com/parker.sovr/",
+            "https://github.com/sovr610",
+            "SEO");
+
+        //seoInfo.AddFeed("Post Comments", "https://site.com/post/comment/rss", FeedType.Rss);
+    });
+}
 
 <div id="Intro" class="tabcontent">
     <h3>History of Chatbots</h3>
@@ -30,9 +62,30 @@
 <div id="NLPchatbot" class="tabcontent">
     <h3>NLP bot - classification</h3>
     <div class="chat-container">
-        <div class="chat-log">Classification type: </div>
+        <div class="chat-log">Classification type: <label id="NLPClassification"></label> </div>
         <input type="text" id="NLPtxt" class="chat-input" placeholder="Type your message...">
-        <button id="NLPbtn">Send</button>
+        <button id="NLPbtn" class="btn btn-success">Send</button><br/>
+        <h1>How Early NLP Libraries Powered Chatbots</h1>
+        <p>Before neural networks were introduced, chatbots used rule-based systems and other classical NLP techniques to simulate conversations. These systems were less computationally demanding and relied heavily on scripted interactions and keyword-based response triggers.</p>
+
+        <h2>Techniques Used</h2>
+        <ol>
+            <li>
+                <strong>Rule-Based Systems:</strong>
+                <p>Chatbots used pattern matching and decision trees to generate responses. They identified keywords or phrases from user inputs to navigate through predefined response paths.</p>
+            </li>
+            <li>
+                <strong>Keyword Recognition:</strong>
+                <p>Tokenization and TF-IDF were key methods for extracting and prioritizing keywords to determine chatbot responses.</p>
+            </li>
+            <li>
+                <strong>Scripted Dialogue:</strong>
+                <p>Many chatbots followed fixed scripts with a linear or state machine-controlled dialogue flow, especially in customer service applications.</p>
+            </li>
+        </ol>
+
+        <h2>Limitations and Evolution</h2>
+        <p>These early systems were rigid and often failed to handle unanticipated user queries. Over time, the advent of statistical models began to replace rule-based systems, paving the way for today's more adaptable and intelligent neural network-based chatbots.</p>
     </div>
 </div>
 
@@ -41,29 +94,33 @@
     <div class="chat-container">
         <div class="chat-log" id="brainjsChatLog"></div>
         <input type="text" id="brainjsTxt" class="chat-input" placeholder="Type your message...">
-        <button id="brainjsBtn">Send</button>
+        <button id="brainjsBtn" class="btn btn-success">Send</button>
     </div><br/>
     <h2>Neural Network Model Diagram</h2><br/>
     <div id="result"></div>
 </div>
 
-<!--<div id="Bertchatbot" class="tabcontent">
+<div id="Bertchatbot" class="tabcontent">
     <h3>Chatbot 2</h3>
     <div class="chat-container">
-        <div class="chat-log"></div>
+        <div class="chat-log">COMING SOON</div>
         <input type="text" id="bertTxt" class="chat-input" placeholder="Type your message...">
         <button id="bertBtn">Send</button>
     </div>
-</div>-->
+</div>
 
 <div id="ChatGPT4" class="tabcontent">
     <h3>Openai & langchain</h3>
     <div class="chat-container">
-        <div class="chat-log">
+        <div class="chat-log" id="gpt-log">
 
         </div>
         <input type="text" id="chatGPTtxt" class="chat-input form-control" placeholder="Type your message...">
-        <button id="chatGPTbtn" class="btn">Send</button>
+        <button id="chatGPTBtn" class="btn btn-success">Send</button><br/>
+        <h2>What is RAG?</h2>
+        <p>
+            Retrieval-Augmented Generation (RAG) enhances the output of Large Language Models (LLMs) by integrating an authoritative external knowledge base before generating responses. LLMs are sophisticated tools, trained on extensive data sets and equipped with billions of parameters, enabling them to produce original content for a range of applications including question answering, language translation, and text completion. RAG significantly augments these capabilities by aligning them with specific domain knowledge or an organization’s proprietary data, all without necessitating retraining of the model. This method offers a cost-effective solution for enhancing the relevance, accuracy, and utility of LLM outputs across various applications.
+        </p>
     </div>
 </div>
 

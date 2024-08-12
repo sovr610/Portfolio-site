@@ -1,7 +1,40 @@
-﻿@*
+﻿@using SeoTags
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 <link rel="stylesheet" href="~/css/pages/wafis.css" />
+<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+@{
+    Html.SetSeoInfo(seoInfo =>
+    {
+        seoInfo.SetCommonInfo(
+            "Parker Bidigare - WAFIS",
+            "My Personal Portfolio website. Here is my own webassembly based front-end framework for building websites",
+            "https://site.com/url/",
+            new[] { "Wafis", "AI", "Automation", "artificial intelligence", "smart device", "C#", "software", "Javascript", "parker bidigare", "asp.net", "tech", "typescript", "portfolio", "opencv", "neural network", "machine learning", "assistant", "like human", "robotics", "science", "Java", "apps", "service", "code", "dotnet", "python", "cybersecurity", "conscious", "tranforming", "world" },
+            new[] { "https://www.parkerbidigare.com/Home/AboutMe", "https://www.parkerbidigare.com/Home/LLM", "https://www.parkerbidigare.com/Home/Wafis", "https://www.parkerbidigare.com/Home/WebXR", "https://www.parkerbidigare.com/Legacy/ai_terminal", "https://www.parkerbidigare.com/Legacy/JSPY", "https://www.parkerbidigare.com/Legacy/NodeItem", "https://www.parkerbidigare.com/Legacy/oled_glasses", "https://www.parkerbidigare.com/Legacy/ParkerScript" });
+
+        seoInfo.SetImageInfo(
+            "~/assets/wafis-logo-small.jpg",
+            640,
+            640,
+            "Parker Bidigare Portfolio Site",
+            mimeType: "image/jpeg", //optional: detect from url file extension
+            cardType: TwitterCardType.SummaryLargeImage);
+
+        seoInfo.SetArticleInfo(
+            "Parker Bidigare - Portfolio Site",
+            DateTimeOffset.Now,
+            DateTimeOffset.Now,
+            "@ParkerBidigare",
+            "https://www.facebook.com/parker.sovr/",
+            "https://github.com/sovr610",
+            "SEO");
+
+        //seoInfo.AddFeed("Post Comments", "https://site.com/post/comment/rss", FeedType.Rss);
+    });
+}
+
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <div class="page-cover">
@@ -31,20 +64,16 @@
 </section>
 <section class="cli-commands">
     <div>
-        <code>npm create wafis-app my-app</code>
-        <p>Creates a new Wafis project named 'my-app'.</p>
+        <code>wafis new project --name my-project</code>
+        <p>Creates a new Wafis project named 'my-project'.</p>
     </div>
     <div>
-        <code>npm run build</code>
+        <code>wafis build --release</code>
         <p>Builds your Wafis project for production, optimizing performance.</p>
     </div>
     <div>
-        <code>npm run add-component MyComponent</code>
+        <code>wafis new component --name MyComponent</code>
         <p>Adds a new component named 'MyComponent' to your project.</p>
-    </div>
-    <div>
-        <code>npm start</code>
-        <p>Launches the development server to run your project and watches for changes.</p>
     </div>
 </section>
 <section>
@@ -56,8 +85,10 @@
     </p>
 </section>
 <section id="footer">
-    <img src="example-gif.gif" alt="Example GIF showing Wafis in action"><br/><br/>
+    <h2>Here are links to resources and medium article about wafis</h2><br/>
+    <a href="https://medium.com/@@parkerbidigare/webassembly-and-frontend-frameworks-wafis-framework-8b4f01e76e5c" class="button-style">Wafis Medium Article</a>
+    <br />
     <a href="https://www.npmjs.com/package/wafis-cli" class="button-style">npm Package <img src="~/assets/npm_icon.png" style="width:64px; height:64px;" /></a>
     <a href="https://github.com/sovr610/Wafis" class="button-style">GitHub Page <img src="~/assets/GitHub-logo.png" style="width:128px; height:64px;" /></a><br />
 </section>
-<script src="scripts.js"></script>
+<script src="~/js/pages/wafis.js"></script>

@@ -5,6 +5,7 @@
 
     async performCall(method, url, content, dataType = 'json', contentType = 'application/json') {
         try {
+            console.log('running ajax call for url: ', url);
             const data = await new Promise((resolve, reject) => {
                 $.ajax({
                     url: url,

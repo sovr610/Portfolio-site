@@ -3,16 +3,128 @@
   "WorkspaceRootPath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\pages\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\pages\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\themes\\crt\\crt.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\themes\\crt\\crt.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\pages\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\pages\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\lib\\llmchat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\lib\\llmchat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\logic\\apihub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\logic\\apihub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\models\\llmmodelresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\models\\llmmodelresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D1C06F6-D62F-48DC-8615-FB4D6575A82F}|node-server\\node-server.esproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\node-server\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3D1C06F6-D62F-48DC-8615-FB4D6575A82F}|node-server\\node-server.esproj|solutionrelative:node-server\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\themes\\cyberpunk\\cyberpunk.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\themes\\cyberpunk\\cyberpunk.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\pages\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\pages\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\lib\\games.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\lib\\games.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\views\\home\\llm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\views\\home\\llm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\content\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\content\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\content\\fancyinput.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\content\\fancyinput.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\lib\\componentloader.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\lib\\componentloader.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\lib\\componentloader_old.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\lib\\componentloader_old.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\pages\\wafis.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\pages\\wafis.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\views\\home\\wafis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\views\\home\\wafis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\portfoliomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\portfoliomain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\pages\\aboutme.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\pages\\aboutme.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\pages\\wafis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\pages\\wafis.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\views\\home\\webxr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\views\\home\\webxr.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\pages\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\pages\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\js\\pages\\llm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\js\\pages\\llm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\css\\pages\\llm.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\css\\pages\\llm.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|c:\\users\\sovr6\\onedrive\\desktop\\projects\\portfolio-site\\portfoliomain\\wwwroot\\lib\\ajax-caller\\ajaxcaller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C69DA449-FA13-4A5D-B9A9-0C53FC6F3B82}|PortfolioMain\\PortfolioMain.csproj|solutionrelative:portfoliomain\\wwwroot\\lib\\ajax-caller\\ajaxcaller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +139,410 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\home.css",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\css\\pages\\home.css",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\home.css",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\css\\pages\\home.css",
+              "ViewState": "AQIAAGkFAAAAAAAAAAAIwHsFAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-07T18:44:40.585Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "home.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\home.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\pages\\home.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\home.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\pages\\home.js",
+              "ViewState": "AQIAAPMHAAAAAAAAAAAgwBEIAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-06T21:23:08.297Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "crt.css",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\Themes\\CRT\\crt.css",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\css\\Themes\\CRT\\crt.css",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\Themes\\CRT\\crt.css",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\css\\Themes\\CRT\\crt.css",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAAAMwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-12T04:54:59.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LLMmodelResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Models\\LLMmodelResponse.cs",
+              "RelativeDocumentMoniker": "PortfolioMain\\Models\\LLMmodelResponse.cs",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Models\\LLMmodelResponse.cs",
+              "RelativeToolTip": "PortfolioMain\\Models\\LLMmodelResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T02:36:54.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PortfolioMain\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PortfolioMain\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T02:23:23.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\node-server\\app.js",
+              "RelativeDocumentMoniker": "node-server\\app.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\node-server\\app.js",
+              "RelativeToolTip": "node-server\\app.js",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAwwMMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-11T22:32:45.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "cyberpunk.min.css",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\Themes\\CyberPunk\\cyberpunk.min.css",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\css\\Themes\\CyberPunk\\cyberpunk.min.css",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\Themes\\CyberPunk\\cyberpunk.min.css",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\css\\Themes\\CyberPunk\\cyberpunk.min.css",
+              "ViewState": "AQIAANsEAAAAAAAAAAAlwJcDAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-11T16:52:55.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "games.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\games.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\lib\\games.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\games.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\lib\\games.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-09T19:15:04.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "llmChat.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\llmChat.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\lib\\llmChat.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\llmChat.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\lib\\llmChat.js",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAQwFoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-08T17:57:59.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ComponentLoader.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader.js",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAgwGcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-07T23:33:49.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "wafis.css",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\wafis.css",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\css\\pages\\wafis.css",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\wafis.css",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\css\\pages\\wafis.css",
+              "ViewState": "AQIAADIAAAAAAAAAAAAYwFMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-07T21:37:26.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Projects.html",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\Projects.html",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\content\\Projects.html",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\Projects.html",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\content\\Projects.html",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAgwKgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-07T21:12:21.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FancyInput.html",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\FancyInput.html",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\content\\FancyInput.html",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\FancyInput.html",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\content\\FancyInput.html",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAFQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-07T20:33:16.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ComponentLoader_old.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader_old.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader_old.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader_old.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader_old.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-07T20:31:27.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "hit-swing-sword-small-2-95566.mp3",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\assets\\sounds\\hit-swing-sword-small-2-95566.mp3",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARCSURBVEhLtVVdTBxVFP7unTs/Ozu77C67y/K7sEvRACVRK0or1lKxxATbFx5MTQxJTWMICUrSqKk\u002BmfhijMakscbENPZNnjRNavTFJlVJpA1Uo\u002BBPgUILAkuB/WN2dsY7y1REu0tf\u002BiVnzv0553x37jlnBvcVlmU5o9KQGcHpg2rv9ACZnB3C1BsHpKOS4GzuAurokvBKRHqqHkfK3Fajz4v4oSg94pWp7GyXxD0RSKLo0Zi1jxiMCKZAfCIekUWmOdslQRxdEh\u002BdPdveVsm\u002BichpjdI8rt\u002BW16/MbR4cfmVo3DEpint6AzClR67vcOeajiEZ7QWpedQTrKjuc3ZLYlcC1e2mldWR44JAyGY2C4kJcMkSyWQzPS6Xuqv/rgZD/X0PMTPfwJgIJiswTAJCBUTK1LaTx4\u002B1OmZFsWuxdYlT/Y\u002Bxq097Utcg3pqAuvIDXNMXYF4\u002BT2cnxmYuzemXHdO7oiRB1x5N6Y0ar1UL8/GyxE/QZkYLBMrazzCWEjB0QlapMnI9kTMcl/\u002Bh5BURXY\u002B7iREXmD3hjSlysY/ERVR4fogRQy7XWDAugqIELpmh5\u002BH6ZjczQ4Vatpuey53mlziZSs1Qd1u0xbYthqIEVHQxb/dgh9DS7YErAhM\u002B5IkG0\u002BJCfIA7AuuBA\u002B7yZwaeYJLK6e6Ooo2maZrn/TMffx2tq2kPsRRYegk0l4IsC8gQGSu6G\u002Buc7Nbi8o\u002BvDr58OJnc2HBcd2BHkmVJwqUzJxpeak33dj5Y0SU1He4r9/tEU\u002BYn9kdBgnuQVKpgqJUQVB82kkmkUil/B722\u002BUKjHnv2yZaNryYWV/Pm9kd0xxVRGLT\u002B9nenahd\u002BOScl1t\u002BBmVd1XiCyLMHKG7jTaHYi0uk0VFWFpkguNWW83Zha\u002B7QZy8MU1n9i/guv9x9SxORcZ9oEcjdvIDB\u002BHlLiNxibKRROxctJz1sw\u002BFC0chBW/oQ29hnY0gzS3F/TVztP9u7d8ZXdkYO5z1/cr4yd\u002B/bGHITJaSAeofB4FYgVIeTVWhAtAMooBH0ZbGMG\u002BkICN\u002Bcz\u002BH3RRF0AqA7ys3T0drYNfDnqhNzOQXMsghPt6TfZ\u002BsI\u002BHgM5fiRZtHhecpCya5D\u002BmuVNNgnX8q9QkrOg2XXk9RwyGQv2zyceBwKVoIFY2PhiPH9haWUr5/8QvDfcE9grff\u002BhQAy36gbKy3it83WBXxfJb70qsR\u002B2B9cWF8YNPF6gLgb4qvi1efiamKitaD36ycjFq5vccjsHYm6\u002BQxYzQZE7MD8vc\u002B4QrgOqeJ9GGoBgLf\u002BzhXjAINdhHpDPA7ZwO94SBR\u002BhQJAMM/2Px52w2wRCduogjYQJqwzDFrGe65owSCgMoToMqSEMpSkMOcbnfJ0GOIt/a8z4nlDFNRcaChMhe\u002BU5J\u002Bx2kt/qUgaf3\u002B//wJlu7djlzK\u002BoKGwb\u002B4hOlILij5HRlVOnL\u002BrvFhbvL4C/AeWISJUV9UxSAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-07T01:47:30.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AboutMe.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\AboutMe.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\pages\\AboutMe.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\AboutMe.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\pages\\AboutMe.js",
+              "ViewState": "AQIAAKEBAAAAAAAAAAAuwHQAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-27T19:21:04.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "wafis.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\wafis.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\pages\\wafis.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\wafis.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\pages\\wafis.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-26T18:42:54.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PortfolioMain\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "PortfolioMain\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAC0AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T15:56:37.291Z",
+              "WhenOpened": "2024-04-23T15:56:37.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AjaxCaller.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\lib\\ajax-caller\\AjaxCaller.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\lib\\ajax-caller\\AjaxCaller.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\lib\\ajax-caller\\AjaxCaller.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\lib\\ajax-caller\\AjaxCaller.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-23T21:29:14.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "APIhub.cs",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Logic\\APIhub.cs",
+              "RelativeDocumentMoniker": "PortfolioMain\\Logic\\APIhub.cs",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Logic\\APIhub.cs",
+              "RelativeToolTip": "PortfolioMain\\Logic\\APIhub.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAwCEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T20:03:47.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PortfolioMain\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PortfolioMain\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAEYAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-23T15:53:38.762Z",
-              "EditorCaption": ""
+              "DocumentIndex": 22,
+              "Title": "PortfolioMain.csproj",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\PortfolioMain.csproj",
+              "RelativeDocumentMoniker": "PortfolioMain\\PortfolioMain.csproj",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\PortfolioMain.csproj",
+              "RelativeToolTip": "PortfolioMain\\PortfolioMain.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-23T20:04:45.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
+              "Title": "LLM.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\LLM.cshtml",
+              "RelativeDocumentMoniker": "PortfolioMain\\Views\\Home\\LLM.cshtml",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\LLM.cshtml",
+              "RelativeToolTip": "PortfolioMain\\Views\\Home\\LLM.cshtml",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAG8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T21:24:58.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Wafis.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\Wafis.cshtml",
+              "RelativeDocumentMoniker": "PortfolioMain\\Views\\Home\\Wafis.cshtml",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\Wafis.cshtml",
+              "RelativeToolTip": "PortfolioMain\\Views\\Home\\Wafis.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T19:22:25.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Index.css",
               "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\Index.css",
               "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\css\\pages\\Index.css",
               "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\Index.css",
               "RelativeToolTip": "PortfolioMain\\wwwroot\\css\\pages\\Index.css",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAAALIAAAA6AAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-23T15:19:07.795Z",
+              "WhenOpened": "2024-04-23T15:19:07.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Program.cs",
+              "RelativeDocumentMoniker": "PortfolioMain\\Program.cs",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Program.cs",
+              "RelativeToolTip": "PortfolioMain\\Program.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAIwFoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T17:39:25.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WebXR.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\WebXR.cshtml",
+              "RelativeDocumentMoniker": "PortfolioMain\\Views\\Home\\WebXR.cshtml",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Home\\WebXR.cshtml",
+              "RelativeToolTip": "PortfolioMain\\Views\\Home\\WebXR.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T18:31:21.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LLM.js",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\LLM.js",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\js\\pages\\LLM.js",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\pages\\LLM.js",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\js\\pages\\LLM.js",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCYAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-23T21:24:43.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PortfolioMain\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PortfolioMain\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T15:53:38.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AIController.cs",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Controllers\\AIController.cs",
+              "RelativeDocumentMoniker": "PortfolioMain\\Controllers\\AIController.cs",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\Controllers\\AIController.cs",
+              "RelativeToolTip": "PortfolioMain\\Controllers\\AIController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwB8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T20:03:20.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LLM.css",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\LLM.css",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\css\\pages\\LLM.css",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\css\\pages\\LLM.css",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\css\\pages\\LLM.css",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-26T15:31:06.433Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "04653a7a-9970-4c42-a79d-b346e42e6cb0",
+        "Display": 0,
+        "X": 265,
+        "Y": 230,
+        "Width": 489,
+        "Height": 355,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "PortfolioMain\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\index.html",
+              "RelativeToolTip": "PortfolioMain\\wwwroot\\index.html",
+              "ViewState": "AQIAACYCAAAAAAAAAAAqwFgCAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-06T18:03:12.615Z",
               "EditorCaption": ""
             }
           ]

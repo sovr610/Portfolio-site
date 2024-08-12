@@ -9,15 +9,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.SEOHelper" Version="1.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SeoTags" Version="2.0.1" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="enums\" />
     <Folder Include="wwwroot\assets\music\" />
+    <Folder Include="wwwroot\assets\images\" />
+    <Folder Include="wwwroot\assets\Cursors\" />
+    <Folder Include="wwwroot\assets\movies\" />
+    <Folder Include="wwwroot\assets\sounds\" />
     <Folder Include="wwwroot\assets\QR\" />
     <Folder Include="wwwroot\assets\textures\computers\" />
+    <Folder Include="wwwroot\assets\textures\enemy\" />
+    <Folder Include="wwwroot\assets\textures\tech-icons\" />
+    <Folder Include="wwwroot\js\lib\minecraft-clone\" />
     <Folder Include="wwwroot\Legacy\" />
   </ItemGroup>
 
