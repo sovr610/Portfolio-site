@@ -14,13 +14,13 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="~/js/lib/pdf.mjs" type="module"></script>
     <script src="~/lib/ajax-caller/AjaxCaller.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="z-index: 9999999">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PortfolioMain</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -29,22 +29,29 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="aframe_game">Aframe Game</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutMe">About Me</a>
+                        <li>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="ai_terminal">AI Terminal</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LLM">LLM</a>
+                        <li>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="JSPY">JSPY Terminal</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WebXr">WebXr</a>
+                        <li>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="NodeItem">NodeItem</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Wafis">Wafis (My Frontend Framework)</a>
+                        <li>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="oled_glasses">OLED Glasses</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="opencv">Opencv</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="ParkerScript">ParkerScript</a>
+                        </li>
+                        <!--<li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 More
                             </a>
@@ -58,7 +65,7 @@
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Legacy" asp-action="ParkerScript">ParkerScript</a></li>
 
                             </ul>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
             </div>

@@ -102,7 +102,7 @@ namespace PortfolioMain
 
             app.Use(async (context, next) =>
             {
-                if (context.Request.Path == "/" || context.Request.Path == "/home")
+                if (context.Request.Path == "/")
                 {
                     context.Response.Redirect("/index.html");
                     return;

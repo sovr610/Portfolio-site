@@ -3,386 +3,604 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk Interface</title>
+    <title>Parker Bidigare - Portfolio Site</title>
     <link rel="stylesheet" href="css/Themes/CyberPunk/cyberpunk.min.css">
     <link rel="stylesheet" href="css/Themes/CRT/crt.css">
+    <script src="js/lib/gameloader.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@3f0df33946cf12e3d552b3b4e500dd5b8ff6f692/dist/aframe-master.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-effects-component@1.4.4/dist/aframe-effects.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script src="./js/lib/minecraft-clone/dist/minecraft-world.js"></script>
+    <script id="bundlescript" src="./js/lib/bundle-components.js"></script>
     <link rel="stylesheet" href="css/pages/home.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQLL6712P2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-WQLL6712P2');
+    </script>
+
+    <meta name="description" content="A showcase of web development projects by Parker Bidigare. Explore my skills in HTML, CSS, JavaScript, .NET, React, and more.">
+
+    <!-- Open Graph meta tags (for social media sharing) -->
+    <meta property="og:title" content="Parker Bidigare - Senior Web Developer Portfolio">
+    <meta property="og:description" content="Hold on to your keyboards, here holds a lot of my fun projects in one webapplication. Got Javascript, .NET, React, WebXR, AI and more">
+    <meta property="og:image" content="https://www.parkerbidigare.com/portfolio.jpg">
+    <meta property="og:url" content="https://www.parkerbidigare.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Parker Bidigare - Senior Web Developer Portfolio">
+    <meta name="twitter:description" content="Hold on to your keyboards, here holds a lot of my fun projects in one webapplication. Got Javascript, .NET, React, WebXR, AI and more">
+    <meta name="twitter:image" content="https://www.yourwebsite.com/path/to/your-image.jpg">
+
+    <script>
+        AFRAME.registerComponent('boundary-constraint', {
+            schema: {
+                minX: { type: 'number', default: -10 },
+                maxX: { type: 'number', default: 10 },
+                minY: { type: 'number', default: 0 },
+                maxY: { type: 'number', default: 10 },
+                minZ: { type: 'number', default: -10 },
+                maxZ: { type: 'number', default: 10 }
+            },
+
+            tick: function () {
+                var data = this.data;
+                var el = this.el;
+                var position = el.object3D.position;
+
+                position.x = Math.max(data.minX, Math.min(data.maxX, position.x));
+                position.y = -0.4
+                position.z = Math.max(data.minZ, Math.min(data.maxZ, position.z));
+
+                el.object3D.position.set(position.x, position.y, position.z);
+            }
+        });
+
+        AFRAME.registerComponent('shadow-material', {
+            init: function () {
+                this.el.addEventListener('model-loaded', () => {
+                    const obj = this.el.getObject3D('mesh');
+                    if (obj) {
+                        obj.traverse((node) => {
+                            if (node.isMesh) {
+                                node.castShadow = true;
+                                node.receiveShadow = true;
+                                if (node.material) {
+                                    node.material.needsUpdate = true;
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        // Custom shader for improved material rendering
+        AFRAME.registerShader('custom-material', {
+            schema: {
+                color: { type: 'color', is: 'uniform' },
+                roughness: { type: 'number', default: 0.5, is: 'uniform' },
+                metalness: { type: 'number', default: 0.5, is: 'uniform' },
+                normalMap: { type: 'map', is: 'uniform' },
+                envMap: { type: 'map', is: 'uniform' }
+            },
+
+            vertexShader: `
+                  varying vec3 vWorldPosition;
+            varying vec3 vNormal;
+            varying vec2 vUv;
+
+            void main() {
+                vUv = uv;
+                vNormal = normal;
+                vWorldPosition = (modelMatrix * vec4(position, 1.0)).xyz;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+                `,
+
+            fragmentShader: `
+                  uniform vec3 color;
+                  uniform float roughness;
+                  uniform float metalness;
+                  uniform sampler2D normalMap;
+                  uniform samplerCube envMap;
+
+                  varying vec3 vWorldPosition;
+                  varying vec3 vNormal;
+                  varying vec2 vUv;
+
+void main() {
+                    vec3 normal = texture2D(normalMap, vUv).rgb * 2.0 - 1.0;
+                    vec3 viewDir = normalize(cameraPosition - vWorldPosition);
+                    vec3 reflectDir = reflect(-viewDir, normal);
+
+                    vec3 envColor = textureCube(envMap, reflectDir).rgb;
+                    vec3 diffuse = color;
+                    vec3 specular = mix(vec3(0.04), diffuse, metalness);
+
+                    vec3 finalColor = mix(diffuse, envColor, roughness * metalness);
+
+            gl_FragColor = vec4(finalColor, 1.0);
+}
+                `
+        });
+
+        // Component to handle model setup, including shadows and transparent materials
+        AFRAME.registerComponent('model-setup', {
+            init: function () {
+                this.el.addEventListener('model-loaded', this.setupModel.bind(this));
+            },
+
+            setupModel: function () {
+                const obj = this.el.getObject3D('mesh');
+                const renderer = this.el.sceneEl.renderer;
+
+                if (obj && renderer) {
+                    obj.traverse((node) => {
+                        if (node.isMesh) {
+                            // Setup shadows for all meshes
+                            node.castShadow = true;
+                            node.receiveShadow = true;
+
+                            // Handle transparent materials
+                            if (node.material.name.toLowerCase().includes('glass') ||
+                                node.material.name.toLowerCase().includes('window')) {
+                                node.material.transparent = true;
+                                node.material.opacity = 0.6;
+                                node.material.refractionRatio = 0.98;
+                                // Only set envMap if the renderer's environment is available
+                                if (renderer.environment) {
+                                    node.material.envMap = renderer.environment;
+                                }
+                            }
+                            node.material.needsUpdate = true;
+                        }
+                    });
+                }
+            }
+        });
+
+        // Component to set render order
+        AFRAME.registerComponent('render-order', {
+            schema: {
+                order: { type: 'number', default: 0 }
+            },
+            init: function () {
+                this.el.addEventListener('object3dset', () => {
+                    const obj = this.el.getObject3D('mesh');
+                    if (obj) {
+                        obj.renderOrder = this.data.order;
+                        obj.traverse((node) => {
+                            if (node.isMesh) {
+                                node.renderOrder = this.data.order;
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 <body>
-    <div class="flash"></div>
-    <div class="tear"></div>
-    <button id="volume-control">
-        <i class="fas fa-volume-up" id="volume-icon"></i>
-    </button>
-    <div class="container">
-        <div class="button-container crt">
-            <button id="btnIntroduction" class="cyberpunk menu-button" data-prevent-animation="true">Introduction</button>
-            <button id="btnProjects" class="cyberpunk menu-button" data-prevent-animation="true">Projects</button>
-            <button id="btnLLM" class="cyberpunk menu-button" data-prevent-animation="true">LLM</button>
-            <button id="btnWebXR" onclick="openModal()" class="cyberpunk menu-button" data-prevent-animation="true">WebXR</button>
-            <button id="btnComponents" class="cyberpunk menu-button" data-prevent-animation="true">Components</button>
-            <button id="btnMisc" class="cyberpunk menu-button" data-prevent-animation="true">Misc.</button>
-            <button id="btnMusic" class="cyberpunk menu-button" data-prevent-animation="true">Set the Mood</button>
-            <button id="btnTheme" class="cyberpunk menu-button" data-prevent-animation="true">Theme</button>
-        </div>
-        <div class="side-panel-container">
-            <div id="sidePanel" class="side-panel">
-                <div id="sidePanelContent" class="side-panel-content">
-
-                    <div id="WebXR">
-                        <a-scene>
-                            <a-entity id="rig" movement-controls="fly: true; speed: 0.2;">
-                                <a-entity camera position="0 1.6 0" look-controls></a-entity>
-                                <a-entity cursor="rayOrigin: mouse"></a-entity>
-                                <a-entity laser-controls="hand: right"></a-entity>
-                            </a-entity>
-
-                            <a-sky color="#87CEEB"></a-sky>
-
-                            <a-entity id="world-container"></a-entity>
-                        </a-scene>
-                    </div>
-
-                    <div id="Introduction">
-                        <div class="window-intro">
-                            <div class="title-bar-intro">Professional Introduction</div>
-                            <div class="content-intro">
-                                <h1>Parker Bidigare</h1><img src="assets/profile.jpg" alt="Profile Image" class="profile-img">
-                                <br /><br />
-                                <p>Welcome to my professional portfolio. My name is Parker Bidigare, and I am a seasoned software developer with a comprehensive skill set in various programming languages and frameworks. My passion for software development began at an early age, starting with Java and VB.NET, and has grown into a lifelong pursuit of creating innovative solutions through technology.</p>
-                                <p>This portfolio is a showcase of my expertise across a range of projects, including AI integrations, virtual and augmented reality applications, and custom Blazor components. It also features a proprietary front-end framework that I have developed to enhance user experience and interaction.</p>
-                                <p>The development of this site was driven by ASP.NET MVC architecture and enhanced with Blazor Server integration, predominantly using C#. Additionally, I have employed a variety of JavaScript libraries such as jQuery, Bootstrap, Three.js, AFrame.js, PDF.js, and Phaser.js to enrich the site's functionality. More tools and libraries will be integrated as this site continues to evolve.</p>
-                                <p>Please visit my About Me page for a deeper insight into my journey and interests. You might find a delightful surprise there! I hope you find my work compelling and that it sparks your interest. Enjoy exploring my site and have a wonderful day!</p>
-                            </div>
-                        </div>
-
-                        <div class="window-intro">
-                            <div class="title-bar-intro">Skillset Matrix</div>
-                            <div class="content-intro" style="position: relative; overflow: hidden;">
-                                <div id="skillMatrix-intro">
-                                    <div class="skill-category">
-                                        <h3>Programming Languages</h3>
-                                        <div onclick="openSkillsetModal('C#')" class="skill-intro">C# (C Sharp)</div>
-                                        <div onclick="openSkillsetModal('VB.NET')" class="skill-intro">VB.NET</div>
-                                        <div onclick="openSkillsetModal('Java')" class="skill-intro">Java</div>
-                                        <div onclick="openSkillsetModal('JavaScript')" class="skill-intro">JavaScript</div>
-                                        <div onclick="openSkillsetModal('TypeScript')" class="skill-intro">TypeScript</div>
-                                        <div onclick="openSkillsetModal('Python')" class="skill-intro">Python</div>
-                                        <div onclick="openSkillsetModal('HTML/CSS')" class="skill-intro">HTML/CSS</div>
-                                        <div onclick="openSkillsetModal('ColdFusion')" class="skill-intro">ColdFusion</div>
-                                    </div>
-                                    <div class="skill-category">
-                                        <h3>Frameworks &amp; Libraries</h3>
-                                        <div onclick="openSkillsetModal('.NET Webform/MVC')" class="skill-intro">.NET WebForm/MVC</div>
-                                        <div onclick="openSkillsetModal('Blazor')" class="skill-intro">Blazor</div>
-                                        <div onclick="openSkillsetModal('Blazor MAUI')" class="skill-intro">Blazor MAUI</div>
-                                        <div onclick="openSkillsetModal('Spring Boot/Maven')" class="skill-intro">Spring Boot/Maven</div>
-                                        <div onclick="openSkillsetModal('Node.js')" class="skill-intro">Node.js</div>
-                                        <div onclick="openSkillsetModal('Angular')" class="skill-intro">Angular</div>
-                                        <div onclick="openSkillsetModal('React')" class="skill-intro">React/React Native</div>
-                                        <div onclick="openSkillsetModal('Knockout.js')" class="skill-intro">Knockout.js</div>
-                                        <div onclick="openSkillsetModal('TensorFlow')" class="skill-intro">Tensorflow</div>
-                                        <div onclick="openSkillsetModal('WebXR')" class="skill-intro">WebXR (three.js &amp; aframe.js)</div>
-                                        <div onclick="openSkillsetModal('Telerik Reporting')" class="skill-intro">Telerik Reporting &amp; Components</div>
-                                        <div onclick="openSkillsetModal('jQuery')" class="skill-intro">jQuery</div>
-                                        <div onclick="openSkillsetModal('Bootstrap')" class="skill-intro">Bootstrap</div>
-                                        <div onclick="openSkillsetModal('Tailwind CSS')" class="skill-intro">Tailwindcss</div>
-                                        <div onclick="openSkillsetModal('Webpack')" class="skill-intro">Webpack</div>
-                                        <div onclick="openSkillsetModal('Vite')" class="skill-intro">Vite</div>
-                                    </div>
-                                    <div class="skill-category">
-                                        <h3>Databases</h3>
-                                        <div onclick="openSkillsetModal('SQL Server')" class="skill-intro">SQL Server</div>
-                                        <div onclick="openSkillsetModal('SQLite')" class="skill-intro">SQLite</div>
-                                        <div onclick="openSkillsetModal('PostgreSQL')" class="skill-intro">PostgreSQL</div>
-                                        <div onclick="openSkillsetModal('Oracle Database')" class="skill-intro">Oracle Database</div>
-                                        <div onclick="openSkillsetModal('MongoDB')" class="skill-intro">MongoDB</div>
-                                        <div onclick="openSkillsetModal('Redis')" class="skill-intro">Redis</div>
-                                        <div onclick="openSkillsetModal('Redgate')" class="skill-intro">Redgate</div>
-                                    </div>
-                                    <div class="skill-category">
-                                        <h3>Development Tools</h3>
-                                        <div onclick="openSkillsetModal('Visual Studio')" class="skill-intro">Visual Studio</div>
-                                        <div onclick="openSkillsetModal('SQL Server Management Studio')" class="skill-intro">SQL Server Management Studio (SSMS)</div>
-                                        <div onclick="openSkillsetModal('GitHub')" class="skill-intro">GitHub</div>
-                                        <div onclick="openSkillsetModal('JIRA')" class="skill-intro">JIRA</div>
-                                        <div onclick="openSkillsetModal('ZenHub')" class="skill-intro">Zenhub</div>
-                                        <div onclick="openSkillsetModal('SonarQube')" class="skill-intro">SonarQube</div>
-                                        <div onclick="openSkillsetModal('Snyk')" class="skill-intro">Snyk</div>
-                                    </div>
-                                    <div class="skill-category">
-                                        <h3>Server, Infrastructure &amp; DevOps</h3>
-                                        <div onclick="openSkillsetModal('IIS')" class="skill-intro">Internet Information Services (IIS)</div>
-                                        <div onclick="openSkillsetModal('Linux Server')" class="skill-intro">Linux Server</div>
-                                        <div onclick="openSkillsetModal('Windows Server')" class="skill-intro">Windows Server</div>
-                                        <div onclick="openSkillsetModal('Docker')" class="skill-intro">Docker</div>
-                                        <div onclick="openSkillsetModal('Azure DevOps')" class="skill-intro">Azure DevOps</div>
-                                        <div onclick="openSkillsetModal('GitHub Actions')" class="skill-intro">GitHub Actions</div>
-                                        <div onclick="openSkillsetModal('Jenkins')" class="skill-intro">Jenkins</div>
-                                    </div>
-                                    <div class="skill-category">
-                                        <h3>Testing Tools</h3>
-                                        <div onclick="openSkillsetModal('Jest')" class="skill-intro">Jest</div>
-                                        <div onclick="openSkillsetModal('Mocha')" class="skill-intro">Mocha</div>
-                                        <div onclick="openSkillsetModal('xUnit')" class="skill-intro">xUnit</div>
-                                        <div onclick="openSkillsetModal('Cypress')" class="skill-intro">Cypress</div>
-                                        <div onclick="openSkillsetModal('Chai')" class="skill-intro">Chai</div>
-                                    </div>
-                                </div>
-                                <div class="matrix-bg-intro"></div>
-                            </div>
-                        </div>
-
-                        <div class="window-intro">
-                            <div class="title-bar-intro">Resume</div>
-                            <div class="content-intro">
-                                <div id="pdf-controls-intro">
-                                    <div class="button-intro" id="prev-page-intro">Previous</div>
-                                    <div class="button-intro" id="next-page-intro">Next</div>
-                                    <span id="page-num-intro"></span> / <span id="page-count-intro"></span>
-                                    <div class="button-intro" id="zoom-in-intro">Zoom In</div>
-                                    <div class="button-intro" id="zoom-out-intro">Zoom Out</div>
-                                    <div class="button-intro" id="download-pdf-intro">Download PDF</div>
-                                </div>
-                                <div id="pdf-container-intro"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="LLM">
-                        <div id="app">
-                            <button id="top-left-button">Menu</button>
-                            <div id="chat-area"></div>
-                            <div id="input-area">
-                                <input type="text" id="prompt-input" placeholder="Enter your prompt...">
-                                <button id="submit-button">Send</button>
-                            </div>
-                            <div id="speech-toggle">
-                                <input type="checkbox" id="speech-checkbox">
-                                <label for="speech-checkbox">Enable Speech</label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div id="project-main" class="projects">
-                        <div class="tab-container">
-                            <div class="tab-buttons">
-                                <button class="tab-button active cyberpunk" data-tab="tab1">WebConsole</button>
-                                <button class="tab-button cyberpunk" data-tab="tab2">Parkers LightWeight Components</button>
-                                <button class="tab-button cyberpunk" data-tab="tab3">Wafis</button>
-                            </div>
-                            <div class="tab-content active" id="tab1">
-                                <div class="webconsole-container">
-                                    <h1 class="webconsole-title">Mobile Debug Console Concept</h1>
-                                    <div class="webconsole-content">
-                                        <div class="webconsole-column-left">
-                                            <h2 class="webconsole-subtitle">Features</h2>
-                                            <p class="webconsole-text">Experience the power of Chrome DevTools on your smartphone. Our mobile debug console revolutionizes on-the-go website debugging with unparalleled ease and efficiency. Seamlessly inspect elements and analyze network requests directly from your mobile device, just like you would on a desktop. Say goodbye to the limitations of desktop-only debugging and embrace the flexibility of mobile-first development.</p>
-
-                                            <p class="webconsole-text">
-                                                With our mobile debug console, you can access the full developer console to monitor and execute JavaScript commands, view detailed error logs, and interact with your website's runtime environment in real-time. Track and log events as they happen, allowing you to diagnose issues with precision. You can also tailor the web console to your needs by adding custom tabs, making it easy to switch between tools and views that are most relevant to your workflow.
-                                            </p>
-                                            <p class="webconsole-text">
-                                                Quickly open and close the web console with intuitive two-finger tap gestures, enhancing your control and convenience. Additionally, you can adjust the height of the web console to suit your needs, providing a flexible workspace whether you need a quick glance or an in-depth debugging session.
-                                            </p>
-                                            <p class="webconsole-text">
-                                                This is a beta project aimed at bringing the full power of Chrome DevTools to your fingertips. While the current feature set does not yet include the ability to modify CSS, our vision is to continually expand the capabilities to fully replicate the robust features of Chrome DevTools, offering web developers the most comprehensive mobile debugging experience available.
-                                            </p>
-                                            <p class="webconsole-text">
-                                                With real-time updates and an intuitive interface, our mobile debug console is the ultimate tool for web developers tackling mobile platform issues. Boost your productivity and streamline your workflow like never before.
-                                            </p>
-                                        </div>
-                                        <div class="webconsole-column-right">
-                                            <div class="webconsole-qr-code">
-                                                <img src="assets/images/webconsole-qr.png" alt="QR Code" width="180" height="180"><br />
-                                                <span class="webconsole-text">Try on your phone!</span>
-                                            </div>
-                                            <div class="webconsole-phone-frame">
-                                                <div class="webconsole-phone-screen"></div>
-                                                <video class="webconsole-video-overlay" autoplay loop muted playsinline>
-                                                    <source src="assets/movies/web-console.MP4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                            </div><br />
-                                            <a href="https://github.com/sovr610/web-console" target="_blank" class="btn-devLinks github-devLinks">GitHub</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content" id="tab2">
-                                <h2>Parkers LightWeight Components</h2>
-                                <p>This is a lightweight html component system where you can create your own custom compoonents without jsx or other component features.</p>
-                            </div>
-                            <div class="tab-content" id="tab3">
-                                <header class="header-wafis">
-                                    <div class="container-wafis">
-                                        <h1 class="title-wafis">Wafis Framework</h1>
-                                        <p class="tagline-wafis">The WebAssembly Front-End Framework</p>
-                                        <div class="description-wafis">
-                                            <p>
-                                                Wafis is an innovative front-end framework that combines the power of WebAssembly with the flexibility of modern web development.
-                                                It allows developers to build high-performance web applications using TSX components and multiple programming languages like TypeScript,
-                                                AssemblyScript, C++, and Rust. Wafis aims to provide a seamless development experience while leveraging the speed and efficiency of WebAssembly.
-                                            </p>
-                                        </div>
-                                        <div href="#" class="cta-button-wafis">
-                                            <div class="devLinks-container">
-                                                <a href="https://github.com/sovr610/Wafis" target="_blank" class="btn-devLinks github-devLinks">GitHub</a>
-                                                <a href="https://medium.com/@parkerbidigare/webassembly-and-frontend-frameworks-wafis-framework-8b4f01e76e5c" target="_blank" class="btn-devLinks medium-devLinks">Medium</a>
-                                                <a href="https://www.npmjs.com/package/wafis-cli" target="_blank" class="btn-devLinks npm-devLinks">npm</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </header>
-
-                                <section class="section-wafis section-bg-white-wafis">
-                                    <div class="container-wafis">
-                                        <h2 class="section-title-wafis">Current Features and Development Stage</h2>
-                                        <div class="grid-wafis grid-3-wafis">
-                                            <div class="feature-card-wafis">
-                                                <div class="feature-icon-wafis">&#128187;</div>
-                                                <h3 class="feature-title-wafis">TSX Components</h3>
-                                                <p>Build your UI with familiar TSX syntax</p>
-                                            </div>
-                                            <div class="feature-card-wafis">
-                                                <div class="feature-icon-wafis">&#128295;</div>
-                                                <h3 class="feature-title-wafis">TypeScript Support</h3>
-                                                <p>Leverage TypeScript for type-safe development</p>
-                                            </div>
-                                            <div class="feature-card-wafis">
-                                                <div class="feature-icon-wafis">&#128225;</div>
-                                                <h3 class="feature-title-wafis">WebAssembly Integration</h3>
-                                                <p>Harness the power of WebAssembly in your front-end</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <section class="section-wafis">
-                                    <div class="container-wafis">
-                                        <h2 class="section-title-wafis">Quick Start Commands</h2>
-                                        <div class="grid-wafis grid-3-wafis">
-                                            <div class="command-card-wafis">
-                                                <code class="command-wafis">wafis new project --name my-project</code>
-                                                <p>Creates a new Wafis project named 'my-project'.</p>
-                                            </div>
-                                            <div class="command-card-wafis">
-                                                <code class="command-wafis">wafis build --release</code>
-                                                <p>Builds your Wafis project for production, optimizing performance.</p>
-                                            </div>
-                                            <div class="command-card-wafis">
-                                                <code class="command-wafis">wafis new component --name MyComponent</code>
-                                                <p>Adds a new component named 'MyComponent' to your project.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <section class="section-wafis section-bg-white-wafis">
-                                    <div class="container-wafis">
-                                        <h2 class="section-title-wafis">Future Enhancements</h2>
-                                        <p class="future-description-wafis">
-                                            We're continuously working to expand Wafis capabilities. Our roadmap includes:
-                                        </p>
-                                        <div class="grid-wafis grid-3-wafis">
-                                            <div class="future-feature-wafis">C++ with Emscripten support</div>
-                                            <div class="future-feature-wafis">Dependency package system</div>
-                                            <div class="future-feature-wafis">Rust integration</div>
-                                            <div class="future-feature-wafis">Enhanced CLI options</div>
-                                            <div class="future-feature-wafis">CSS encapsulation</div>
-                                            <div class="future-feature-wafis">Advanced testing with Cypress</div>
-                                        </div>
-                                    </div>
-
-
-                                </section>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+    <div id="loading-screen-zz">
+        <div class="boot-up-zz">
+            <p class="text">System Initializing...</p>
+            <div class="progress-bar-zz">
+                <div class="progress-zz"></div>
             </div>
+            <p class="percentage-zz">0%</p>
         </div>
     </div>
 
-    <div class="modal-overlay-cybermodal" id="modalOverlay-webxr">
-        <div class="modal-cybermodal">
-            <h2 class="modal-title-cybermodal">Welcome to Cybernet</h2>
-            <div class="modal-content-cybermodal">
-                <div class="container-games">
-                    <div class="carousel-games" id="gameCarousel"></div>
-                    <div class="nav-buttons-games">
-                        <button class="button-games" onclick="changeGame(-1)">Previous</button>
-                        <button class="button-games" onclick="changeGame(1)">Next</button>
-                    </div>
-                    <h2 class="title-games" id="gameTitle">Minecraft chunk Gen</h2>
-                    <p class="description-games" id="gameDescription">This example replicates generating a minecraft terrain chunk with basic wasd controls and look controls.</p>
+    <div id="content" style="display: none;">
+
+        <div class="flash"></div>
+        <div class="tear"></div>
+        <button id="volume-control">
+            <i class="fas fa-volume-up" id="volume-icon"></i>
+        </button>
+        <div class="container">
+            <div class="button-container crt" id="crt-container">
+                <button id="btnIntroduction" class="cyberpunk menu-button" data-prevent-animation="true">Introduction</button>
+                <button id="btnProjects" class="cyberpunk menu-button" data-prevent-animation="true">Projects</button>
+                <button id="btnLLM" class="cyberpunk menu-button" data-prevent-animation="true">LLM</button>
+                <button id="btnWebXR" onclick="openModal()" class="cyberpunk menu-button" data-prevent-animation="true">WebXR</button>
+                <button id="btnComponents" class="cyberpunk menu-button" data-prevent-animation="true">Components</button>
+                <button id="btnMisc" class="cyberpunk menu-button" data-prevent-animation="true">Misc.</button>
+                <button id="btnMusic" class="cyberpunk menu-button" data-prevent-animation="true">Set the Mood</button>
+                <button id="btnTheme" class="cyberpunk menu-button" data-prevent-animation="true">Theme</button>
+            </div>
+            <div class="side-panel-container">
+                <div id="sidePanel" class="side-panel">
+                    <div id="sidePanelContent" class="side-panel-content">
+
+                        <div id="WebXR">
+
+                        </div>
+
+                        <div id="Misc" style="height:100%">
+                            <div class="wrapper-misc" style="height:87vh; width:60vw;">
+                                <div class="container-misc" style="height:100%; width:70vw;">
+                                    <h1 class="h1-misc">Settings/Misc</h1>
+                                    <div class="settings-grid-misc">
+                                        <div class="setting-misc" data-setting="crt">Crt Effect: <span>On</span></div>
+                                        <div class="setting-misc" id="legacy-site">Enter Legacy Site</div>
+                                        <!---<div class="setting-misc" data-setting="smoothLighting">Smooth Lighting: <span>Maximum</span></div>
+                                        <div class="setting-misc">Performance: Unlimited</div>
+                                        <div class="setting-misc" data-setting="3dAnaglyph">3D Anaglyph: <span>OFF</span></div>
+                                        <div class="setting-misc" data-setting="viewBobbing">View Bobbing: <span>OFF</span></div>
+                                        <div class="setting-misc">GUI Scale: Large</div>
+                                        <div class="setting-misc" data-setting="advancedOpenGL">Advanced OpenGL: <span>ON</span></div>
+                                        <div class="setting-misc">Brightness: Bright</div>
+                                        <div class="setting-misc" data-setting="clouds">Clouds: <span>ON</span></div>
+                                        <div class="setting-misc">Particles: All</div>
+                                        <div class="setting-misc" data-setting="serverTextures">Server Textures: <span>ON</span></div>
+                                        <div class="setting-misc" data-setting="fullscreen">Fullscreen: <span>OFF</span></div>
+                                        <div class="setting-misc" data-setting="vsync">Use VSync: <span>OFF</span></div>-->
+                                    </div>
+                                    <!--<div class="done-button-misc">Done</div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                            <div id="Introduction">
+                                <div class="window-intro">
+                                    <div class="title-bar-intro">Professional Introduction</div>
+                                    <div class="content-intro">
+                                        <h1>Parker Bidigare</h1><img src="assets/profile.jpg" loading="lazy" alt="Profile Image" class="profile-img">
+                                        <br /><br />
+                                        <p>Welcome to my professional portfolio. My name is Parker Bidigare, and I am a seasoned software developer with a comprehensive skill set in various programming languages and frameworks. My passion for software development began at an early age, starting with Java and VB.NET, and has grown into a lifelong pursuit of creating innovative solutions through technology.</p>
+                                        <p>This portfolio is a showcase of my expertise across a range of projects, including AI integrations, virtual and augmented reality applications, and custom Blazor components. It also features a proprietary front-end framework that I have developed to enhance user experience and interaction.</p>
+                                        <p>The development of this site was driven by ASP.NET MVC architecture and enhanced with Blazor Server integration, predominantly using C#. Additionally, I have employed a variety of JavaScript libraries such as jQuery, Bootstrap, Three.js, AFrame.js, PDF.js, and Phaser.js to enrich the site's functionality. More tools and libraries will be integrated as this site continues to evolve.</p>
+                                        <p>Please visit my About Me page for a deeper insight into my journey and interests. You might find a delightful surprise there! I hope you find my work compelling and that it sparks your interest. Enjoy exploring my site and have a wonderful day!</p>
+                                        <br/>
+                                        <a href="Legacy/oled_glasses" target="_blank" class="win95-button">Legacy Portfolio Site</a>
+                                    </div>
+                                </div>
+
+                                <div class="window-intro">
+                                    <div class="title-bar-intro">Skillset Matrix</div>
+                                    <div class="content-intro" style="position: relative; overflow: hidden;">
+                                        <div id="skillMatrix-intro">
+                                            <div class="skill-category">
+                                                <h3>Programming Languages</h3>
+                                                <div onclick="openSkillsetModal('C#')" class="skill-intro">C# (C Sharp)</div>
+                                                <div onclick="openSkillsetModal('VB.NET')" class="skill-intro">VB.NET</div>
+                                                <div onclick="openSkillsetModal('Java')" class="skill-intro">Java</div>
+                                                <div onclick="openSkillsetModal('JavaScript')" class="skill-intro">JavaScript</div>
+                                                <div onclick="openSkillsetModal('TypeScript')" class="skill-intro">TypeScript</div>
+                                                <div onclick="openSkillsetModal('Python')" class="skill-intro">Python</div>
+                                                <div onclick="openSkillsetModal('HTML/CSS')" class="skill-intro">HTML/CSS</div>
+                                                <div onclick="openSkillsetModal('ColdFusion')" class="skill-intro">ColdFusion</div>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h3>Frameworks &amp; Libraries</h3>
+                                                <div onclick="openSkillsetModal('.NET Webform/MVC')" class="skill-intro">.NET WebForm/MVC</div>
+                                                <div onclick="openSkillsetModal('Blazor')" class="skill-intro">Blazor</div>
+                                                <div onclick="openSkillsetModal('Blazor MAUI')" class="skill-intro">Blazor MAUI</div>
+                                                <div onclick="openSkillsetModal('Spring Boot/Maven')" class="skill-intro">Spring Boot/Maven</div>
+                                                <div onclick="openSkillsetModal('Node.js')" class="skill-intro">Node.js</div>
+                                                <div onclick="openSkillsetModal('Angular')" class="skill-intro">Angular</div>
+                                                <div onclick="openSkillsetModal('React')" class="skill-intro">React/React Native</div>
+                                                <div onclick="openSkillsetModal('Knockout.js')" class="skill-intro">Knockout.js</div>
+                                                <div onclick="openSkillsetModal('TensorFlow')" class="skill-intro">Tensorflow</div>
+                                                <div onclick="openSkillsetModal('WebXR')" class="skill-intro">WebXR (three.js &amp; aframe.js)</div>
+                                                <div onclick="openSkillsetModal('Telerik Reporting')" class="skill-intro">Telerik Reporting &amp; Components</div>
+                                                <div onclick="openSkillsetModal('jQuery')" class="skill-intro">jQuery</div>
+                                                <div onclick="openSkillsetModal('Bootstrap')" class="skill-intro">Bootstrap</div>
+                                                <div onclick="openSkillsetModal('Tailwind CSS')" class="skill-intro">Tailwindcss</div>
+                                                <div onclick="openSkillsetModal('Webpack')" class="skill-intro">Webpack</div>
+                                                <div onclick="openSkillsetModal('Vite')" class="skill-intro">Vite</div>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h3>Databases</h3>
+                                                <div onclick="openSkillsetModal('SQL Server')" class="skill-intro">SQL Server</div>
+                                                <div onclick="openSkillsetModal('SQLite')" class="skill-intro">SQLite</div>
+                                                <div onclick="openSkillsetModal('PostgreSQL')" class="skill-intro">PostgreSQL</div>
+                                                <div onclick="openSkillsetModal('Oracle Database')" class="skill-intro">Oracle Database</div>
+                                                <div onclick="openSkillsetModal('MongoDB')" class="skill-intro">MongoDB</div>
+                                                <div onclick="openSkillsetModal('Redis')" class="skill-intro">Redis</div>
+                                                <div onclick="openSkillsetModal('Redgate')" class="skill-intro">Redgate</div>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h3>Development Tools</h3>
+                                                <div onclick="openSkillsetModal('Visual Studio')" class="skill-intro">Visual Studio</div>
+                                                <div onclick="openSkillsetModal('SQL Server Management Studio')" class="skill-intro">SQL Server Management Studio (SSMS)</div>
+                                                <div onclick="openSkillsetModal('GitHub')" class="skill-intro">GitHub</div>
+                                                <div onclick="openSkillsetModal('JIRA')" class="skill-intro">JIRA</div>
+                                                <div onclick="openSkillsetModal('ZenHub')" class="skill-intro">Zenhub</div>
+                                                <div onclick="openSkillsetModal('SonarQube')" class="skill-intro">SonarQube</div>
+                                                <div onclick="openSkillsetModal('Snyk')" class="skill-intro">Snyk</div>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h3>Server, Infrastructure &amp; DevOps</h3>
+                                                <div onclick="openSkillsetModal('IIS')" class="skill-intro">Internet Information Services (IIS)</div>
+                                                <div onclick="openSkillsetModal('Linux Server')" class="skill-intro">Linux Server</div>
+                                                <div onclick="openSkillsetModal('Windows Server')" class="skill-intro">Windows Server</div>
+                                                <div onclick="openSkillsetModal('Docker')" class="skill-intro">Docker</div>
+                                                <div onclick="openSkillsetModal('Azure DevOps')" class="skill-intro">Azure DevOps</div>
+                                                <div onclick="openSkillsetModal('GitHub Actions')" class="skill-intro">GitHub Actions</div>
+                                                <div onclick="openSkillsetModal('Jenkins')" class="skill-intro">Jenkins</div>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h3>Testing Tools</h3>
+                                                <div onclick="openSkillsetModal('Jest')" class="skill-intro">Jest</div>
+                                                <div onclick="openSkillsetModal('Mocha')" class="skill-intro">Mocha</div>
+                                                <div onclick="openSkillsetModal('xUnit')" class="skill-intro">xUnit</div>
+                                                <div onclick="openSkillsetModal('Cypress')" class="skill-intro">Cypress</div>
+                                                <div onclick="openSkillsetModal('Chai')" class="skill-intro">Chai</div>
+                                            </div>
+                                        </div>
+                                        <div class="matrix-bg-intro"></div>
+                                    </div>
+                                </div>
+
+                                <div class="window-intro">
+                                    <div class="title-bar-intro">Resume</div>
+                                    <div class="content-intro">
+                                        <div id="pdf-controls-intro">
+                                            <div class="button-intro" id="prev-page-intro">Previous</div>
+                                            <div class="button-intro" id="next-page-intro">Next</div>
+                                            <span id="page-num-intro"></span> / <span id="page-count-intro"></span>
+                                            <div class="button-intro" id="zoom-in-intro">Zoom In</div>
+                                            <div class="button-intro" id="zoom-out-intro">Zoom Out</div>
+                                            <div class="button-intro" id="download-pdf-intro">Download PDF</div>
+                                        </div>
+                                        <div id="pdf-container-intro"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="LLM">
+                                <div id="app">
+                                    <button id="top-left-button">Menu</button>
+                                    <div id="chat-area"></div>
+                                    <div id="input-area">
+                                        <input type="text" id="prompt-input" placeholder="Enter your prompt...">
+                                        <button id="submit-button">Send</button>
+                                    </div>
+                                    <div id="speech-toggle">
+                                        <input type="checkbox" id="speech-checkbox">
+                                        <label for="speech-checkbox">Enable Speech</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="components">
+                                <a href="content/angular-components.zip" download="Angular-components.zip" class="cyberpunk-button-download">
+                                    Download Angular Components
+                                </a>
+                                <a href="content/react-components.zip" download="React-components.zip" class="cyberpunk-button-download">
+                                    Download React Components
+                                </a>
+                                <a href="https://github.com/sovr610/react-angular-tool" target="_blank" class="cyberpunk-button-download">
+                                    Angular-React Tool Github
+                                </a><br />
+                                <div class="main-div"><div><div id="react-root"></div></div><div><app-root></app-root></div></div>
+                            </div>
+
+                            <div id="project-main" class="projects">
+                                <div class="tab-container">
+                                    <div class="tab-buttons">
+                                        <button class="tab-button active cyberpunk" data-tab="tab1">WebConsole</button>
+                                        <button class="tab-button cyberpunk" data-tab="tab2">Parkers LightWeight Components</button>
+                                        <button class="tab-button cyberpunk" data-tab="tab3">Wafis</button>
+                                    </div>
+                                    <div class="tab-content active" id="tab1">
+                                        <div class="webconsole-container">
+                                            <h1 class="webconsole-title">Mobile Debug Console Concept</h1>
+                                            <div class="webconsole-content">
+                                                <div class="webconsole-column-left">
+                                                    <h2 class="webconsole-subtitle">Features</h2>
+                                                    <p class="webconsole-text">Experience the power of Chrome DevTools on your smartphone. Our mobile debug console revolutionizes on-the-go website debugging with unparalleled ease and efficiency. Seamlessly inspect elements and analyze network requests directly from your mobile device, just like you would on a desktop. Say goodbye to the limitations of desktop-only debugging and embrace the flexibility of mobile-first development.</p>
+
+                                                    <p class="webconsole-text">
+                                                        With our mobile debug console, you can access the full developer console to monitor and execute JavaScript commands, view detailed error logs, and interact with your website's runtime environment in real-time. Track and log events as they happen, allowing you to diagnose issues with precision. You can also tailor the web console to your needs by adding custom tabs, making it easy to switch between tools and views that are most relevant to your workflow.
+                                                    </p>
+                                                    <p class="webconsole-text">
+                                                        Quickly open and close the web console with intuitive two-finger tap gestures, enhancing your control and convenience. Additionally, you can adjust the height of the web console to suit your needs, providing a flexible workspace whether you need a quick glance or an in-depth debugging session.
+                                                    </p>
+                                                    <p class="webconsole-text">
+                                                        This is a beta project aimed at bringing the full power of Chrome DevTools to your fingertips. While the current feature set does not yet include the ability to modify CSS, our vision is to continually expand the capabilities to fully replicate the robust features of Chrome DevTools, offering web developers the most comprehensive mobile debugging experience available.
+                                                    </p>
+                                                    <p class="webconsole-text">
+                                                        With real-time updates and an intuitive interface, our mobile debug console is the ultimate tool for web developers tackling mobile platform issues. Boost your productivity and streamline your workflow like never before.
+                                                    </p>
+                                                </div>
+                                                <div class="webconsole-column-right">
+                                                    <div class="webconsole-qr-code">
+                                                        <img src="assets/images/webconsole-qr.png" loading="lazy" alt="QR Code" width="180" height="180"><br />
+                                                        <span class="webconsole-text">Try on your phone!</span>
+                                                    </div>
+                                                    <div class="webconsole-phone-frame">
+                                                        <div class="webconsole-phone-screen"></div>
+                                                        <video class="webconsole-video-overlay" autoplay loop muted playsinline>
+                                                            <source src="assets/movies/web-console.MP4" type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div><br />
+                                                    <a href="https://github.com/sovr610/web-console" target="_blank" class="btn-devLinks github-devLinks">GitHub</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content" id="tab2">
+                                        <h2>Parkers LightWeight Components</h2>
+                                        <p>This is a lightweight html component system where you can create your own custom compoonents without jsx or other component features.</p>
+                                    </div>
+                                    <div class="tab-content" id="tab3">
+                                        <header class="header-wafis">
+                                            <div class="container-wafis">
+                                                <h1 class="title-wafis">Wafis Framework</h1>
+                                                <p class="tagline-wafis">The WebAssembly Front-End Framework</p>
+                                                <div class="description-wafis">
+                                                    <p>
+                                                        Wafis is an innovative front-end framework that combines the power of WebAssembly with the flexibility of modern web development.
+                                                        It allows developers to build high-performance web applications using TSX components and multiple programming languages like TypeScript,
+                                                        AssemblyScript, C++, and Rust. Wafis aims to provide a seamless development experience while leveraging the speed and efficiency of WebAssembly.
+                                                    </p>
+                                                </div>
+                                                <div href="#" class="cta-button-wafis">
+                                                    <div class="devLinks-container">
+                                                        <a href="https://github.com/sovr610/Wafis" target="_blank" class="btn-devLinks github-devLinks">GitHub</a>
+                                                        <a href="https://medium.com/@parkerbidigare/webassembly-and-frontend-frameworks-wafis-framework-8b4f01e76e5c" target="_blank" class="btn-devLinks medium-devLinks">Medium</a>
+                                                        <a href="https://www.npmjs.com/package/wafis-cli" target="_blank" class="btn-devLinks npm-devLinks">npm</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </header>
+
+                                        <section class="section-wafis section-bg-white-wafis">
+                                            <div class="container-wafis">
+                                                <h2 class="section-title-wafis">Current Features and Development Stage</h2>
+                                                <div class="grid-wafis grid-3-wafis">
+                                                    <div class="feature-card-wafis">
+                                                        <div class="feature-icon-wafis">&#128187;</div>
+                                                        <h3 class="feature-title-wafis">TSX Components</h3>
+                                                        <p>Build your UI with familiar TSX syntax</p>
+                                                    </div>
+                                                    <div class="feature-card-wafis">
+                                                        <div class="feature-icon-wafis">&#128295;</div>
+                                                        <h3 class="feature-title-wafis">TypeScript Support</h3>
+                                                        <p>Leverage TypeScript for type-safe development</p>
+                                                    </div>
+                                                    <div class="feature-card-wafis">
+                                                        <div class="feature-icon-wafis">&#128225;</div>
+                                                        <h3 class="feature-title-wafis">WebAssembly Integration</h3>
+                                                        <p>Harness the power of WebAssembly in your front-end</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <section class="section-wafis">
+                                            <div class="container-wafis">
+                                                <h2 class="section-title-wafis">Quick Start Commands</h2>
+                                                <div class="grid-wafis grid-3-wafis">
+                                                    <div class="command-card-wafis">
+                                                        <code class="command-wafis">wafis new project --name my-project</code>
+                                                        <p>Creates a new Wafis project named 'my-project'.</p>
+                                                    </div>
+                                                    <div class="command-card-wafis">
+                                                        <code class="command-wafis">wafis build --release</code>
+                                                        <p>Builds your Wafis project for production, optimizing performance.</p>
+                                                    </div>
+                                                    <div class="command-card-wafis">
+                                                        <code class="command-wafis">wafis new component --name MyComponent</code>
+                                                        <p>Adds a new component named 'MyComponent' to your project.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <section class="section-wafis section-bg-white-wafis">
+                                            <div class="container-wafis">
+                                                <h2 class="section-title-wafis">Future Enhancements</h2>
+                                                <p class="future-description-wafis">
+                                                    We're continuously working to expand Wafis capabilities. Our roadmap includes:
+                                                </p>
+                                                <div class="grid-wafis grid-3-wafis">
+                                                    <div class="future-feature-wafis">C++ with Emscripten support</div>
+                                                    <div class="future-feature-wafis">Dependency package system</div>
+                                                    <div class="future-feature-wafis">Rust integration</div>
+                                                    <div class="future-feature-wafis">Enhanced CLI options</div>
+                                                    <div class="future-feature-wafis">CSS encapsulation</div>
+                                                    <div class="future-feature-wafis">Advanced testing with Cypress</div>
+                                                </div>
+                                            </div>
+
+
+                                        </section>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                 </div>
             </div>
-            <button class="close-button-cybermodal" onclick="closeModal()">Disconnect</button>
         </div>
-    </div>
 
-    <div class="modal-overlay-cybermodal-rag" id="modalOverlay-LLM">
-        <div class="modal-cybermodal-rag">
-            <h2 class="modal-title-cybermodal-rag">Welcome to Cybernet</h2>
-            <div class="modal-content-cybermodal-rag">
-                <p>RAG is a technique that combines the power of large language models with external knowledge retrieval to enhance the quality and accuracy of generated responses. Here's a breakdown of how RAG works with LLMs:</p>
-
-                <div class="rag-container">
-
-                    <div class="rag-nodes-container">
-                        <div id="rag-query" class="rag-node rag-query"><i class="fas fa-question-circle"></i>User Query</div>
-                        <div id="rag-promptBuilder" class="rag-node rag-promptBuilder"><i class="fas fa-cogs"></i>Prompt Builder</div>
-                        <div id="rag-llm" class="rag-node rag-llm"><i class="fas fa-brain"></i>LLM</div>
-                        <div id="rag-retriever" class="rag-node rag-retriever"><i class="fas fa-search"></i>Retriever</div>
-                        <div id="rag-vectorDB" class="rag-node rag-vectorDB"><i class="fas fa-database"></i>Vector Database</div>
-                        <div id="rag-sqlDB" class="rag-node rag-sqlDB"><i class="fas fa-table"></i>SQL Database</div>
-                        <div id="rag-wolframAlpha" class="rag-node rag-wolframAlpha"><i class="fas fa-calculator"></i>Wolfram Alpha</div>
-                        <div id="rag-googleSearch" class="rag-node rag-googleSearch"><i class="fab fa-google"></i>Google Search</div>
-                        <div id="rag-knowledgeBase" class="rag-node rag-knowledgeBase"><i class="fas fa-book"></i>Knowledge Base</div>
-                        <div id="rag-response" class="rag-node rag-response"><i class="fas fa-comment-dots"></i>Generated Response</div>
+        <div class="modal-overlay-cybermodal" id="modalOverlay-webxr">
+            <div class="modal-cybermodal">
+                <h2 class="modal-title-cybermodal">Welcome to Cybernet</h2>
+                <div class="modal-content-cybermodal">
+                    <div class="container-games">
+                        <div class="carousel-games" id="gameCarousel"></div>
+                        <div class="nav-buttons-games">
+                            <button class="button-games" onclick="changeGame(-1)">Previous</button>
+                            <button class="button-games" onclick="changeGame(1)">Next</button>
+                        </div>
+                        <h2 class="title-games" id="gameTitle">Minecraft chunk Gen</h2>
+                        <p class="description-games" id="gameDescription">This example replicates generating a minecraft terrain chunk with basic wasd controls and look controls.</p>
                     </div>
-                    <div id="rag-explanation" class="rag-explanation">
-                        <h1 class="rag-desc-h1-cybermodal-rag">RAG (Retrieval-Augmented Generation) with LLMs</h1>
+                </div>
+                <button class="close-button-cybermodal" onclick="closeModal()">Disconnect</button>
+            </div>
+        </div>
+
+        <div class="modal-overlay-cybermodal-rag" id="modalOverlay-LLM">
+            <div class="modal-cybermodal-rag">
+                <h2 class="modal-title-cybermodal-rag">Welcome to Cybernet</h2>
+                <div class="modal-content-cybermodal-rag">
+                    <p>RAG is a technique that combines the power of large language models with external knowledge retrieval to enhance the quality and accuracy of generated responses. Here's a breakdown of how RAG works with LLMs:</p>
+
+                    <div class="rag-container">
+
+                        <div class="rag-nodes-container">
+                            <div id="rag-query" class="rag-node rag-query"><i class="fas fa-question-circle"></i>User Query</div>
+                            <div id="rag-promptBuilder" class="rag-node rag-promptBuilder"><i class="fas fa-cogs"></i>Prompt Builder</div>
+                            <div id="rag-llm" class="rag-node rag-llm"><i class="fas fa-brain"></i>LLM</div>
+                            <div id="rag-retriever" class="rag-node rag-retriever"><i class="fas fa-search"></i>Retriever</div>
+                            <div id="rag-vectorDB" class="rag-node rag-vectorDB"><i class="fas fa-database"></i>Vector Database</div>
+                            <div id="rag-sqlDB" class="rag-node rag-sqlDB"><i class="fas fa-table"></i>SQL Database</div>
+                            <div id="rag-wolframAlpha" class="rag-node rag-wolframAlpha"><i class="fas fa-calculator"></i>Wolfram Alpha</div>
+                            <div id="rag-googleSearch" class="rag-node rag-googleSearch"><i class="fab fa-google"></i>Google Search</div>
+                            <div id="rag-knowledgeBase" class="rag-node rag-knowledgeBase"><i class="fas fa-book"></i>Knowledge Base</div>
+                            <div id="rag-response" class="rag-node rag-response"><i class="fas fa-comment-dots"></i>Generated Response</div>
+                        </div>
+                        <div id="rag-explanation" class="rag-explanation">
+                            <h1 class="rag-desc-h1-cybermodal-rag">RAG (Retrieval-Augmented Generation) with LLMs</h1>
 
 
-                        <h2 class="rag-desc-h2-cybermodal-rag">1. User Query</h2>
-                        <p>The process starts with a user query, which is the input question or prompt that needs to be answered.</p>
+                            <h2 class="rag-desc-h2-cybermodal-rag">1. User Query</h2>
+                            <p>The process starts with a user query, which is the input question or prompt that needs to be answered.</p>
 
-                        <h2 class="rag-desc-h2-cybermodal-rag">2. Prompt Builder</h2>
-                        <p>The prompt builder constructs an effective prompt by combining the user query with additional context or instructions. This helps guide the LLM to generate more relevant and accurate responses.</p>
+                            <h2 class="rag-desc-h2-cybermodal-rag">2. Prompt Builder</h2>
+                            <p>The prompt builder constructs an effective prompt by combining the user query with additional context or instructions. This helps guide the LLM to generate more relevant and accurate responses.</p>
 
-                        <h2 class="rag-desc-h2-cybermodal-rag">3. Retriever</h2>
-                        <p>The retriever is responsible for fetching relevant information from various sources. In this case, it includes:</p>
-                        <ul class="rag-desc-ul-cybermodal-rag">
-                            <li class="rag-desc-li-cybermodal-rag">Vector Database</li>
-                            <li class="rag-desc-li-cybermodal-rag">Google Search</li>
-                            <li class="rag-desc-li-cybermodal-rag">Knowledge Base</li>
-                            <li class="rag-desc-li-cybermodal-rag">Wolfram Alpha</li>
-                            <li class="rag-desc-li-cybermodal-rag">SQL Database</li>
-                        </ul>
+                            <h2 class="rag-desc-h2-cybermodal-rag">3. Retriever</h2>
+                            <p>The retriever is responsible for fetching relevant information from various sources. In this case, it includes:</p>
+                            <ul class="rag-desc-ul-cybermodal-rag">
+                                <li class="rag-desc-li-cybermodal-rag">Vector Database</li>
+                                <li class="rag-desc-li-cybermodal-rag">Google Search</li>
+                                <li class="rag-desc-li-cybermodal-rag">Knowledge Base</li>
+                                <li class="rag-desc-li-cybermodal-rag">Wolfram Alpha</li>
+                                <li class="rag-desc-li-cybermodal-rag">SQL Database</li>
+                            </ul>
 
-                        <h2 class="rag-desc-h2-cybermodal-rag">4. LLM</h2>
-                        <p>The Large Language Model generates the final response based on the constructed prompt and the retrieved information.</p>
+                            <h2 class="rag-desc-h2-cybermodal-rag">4. LLM</h2>
+                            <p>The Large Language Model generates the final response based on the constructed prompt and the retrieved information.</p>
 
-                        <h2 class="rag-desc-h2-cybermodal-rag">Python Implementation using LangChain</h2>
-                        <p>Here's a basic implementation of RAG using LangChain:</p>
+                            <h2 class="rag-desc-h2-cybermodal-rag">Python Implementation using LangChain</h2>
+                            <p>Here's a basic implementation of RAG using LangChain:</p>
 
-                        <pre class="code-block-cybermodal-rag"><code id="pythonexample" class="python hljs language-python">
+                            <pre class="code-block-cybermodal-rag"><code id="pythonexample" class="python hljs language-python">
 import os
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
@@ -544,67 +762,68 @@ if __name__ == "__main__":
         print("-" * 50)
                     </code></pre>
 
-                        <h2 class="rag-desc-h2-cybermodal-rag">Explanation of the Code</h2>
-                        <p>This code demonstrates a basic implementation of RAG using LangChain. Let's break down each component:</p>
+                            <h2 class="rag-desc-h2-cybermodal-rag">Explanation of the Code</h2>
+                            <p>This code demonstrates a basic implementation of RAG using LangChain. Let's break down each component:</p>
 
-                        <h3 class="rag-desc-h3-cybermodal-rag">1. User Query</h3>
-                        <p>We start with a user query asking about the population of New York City and how it compares to Tokyo.</p>
+                            <h3 class="rag-desc-h3-cybermodal-rag">1. User Query</h3>
+                            <p>We start with a user query asking about the population of New York City and how it compares to Tokyo.</p>
 
-                        <h3 class="rag-desc-h3-cybermodal-rag">2. Prompt Builder</h3>
-                        <p>We use LangChain's PromptTemplate to create a template that combines the user query with additional context. This helps guide the LLM to generate a more informed response.</p>
+                            <h3 class="rag-desc-h3-cybermodal-rag">2. Prompt Builder</h3>
+                            <p>We use LangChain's PromptTemplate to create a template that combines the user query with additional context. This helps guide the LLM to generate a more informed response.</p>
 
-                        <h3 class="rag-desc-h3-cybermodal-rag">3. Retriever</h3>
-                        <p>We set up multiple retrievers to gather information from various sources:</p>
-                        <ul class="rag-desc-ul-cybermodal-rag">
-                            <li class="rag-desc-li-cybermodal-rag">Vector Database: We use FAISS with OpenAI embeddings to create a simple vector store.</li>
-                            <li class="rag-desc-li-cybermodal-rag">Google Search: We use the GoogleSearchRetriever to fetch information from the web.</li>
-                            <li class="rag-desc-li-cybermodal-rag">Knowledge Base: We implement a simple dictionary as a knowledge base.</li>
-                            <li class="rag-desc-li-cybermodal-rag">Wolfram Alpha: We use the WolframAlphaRetriever to access computational knowledge.</li>
-                            <li class="rag-desc-li-cybermodal-rag">SQL Database: We set up an SQLite database and create an SQL agent to query it.</li>
-                        </ul>
-                        <p>The retrieve_information function combines results from all these sources.</p>
+                            <h3 class="rag-desc-h3-cybermodal-rag">3. Retriever</h3>
+                            <p>We set up multiple retrievers to gather information from various sources:</p>
+                            <ul class="rag-desc-ul-cybermodal-rag">
+                                <li class="rag-desc-li-cybermodal-rag">Vector Database: We use FAISS with OpenAI embeddings to create a simple vector store.</li>
+                                <li class="rag-desc-li-cybermodal-rag">Google Search: We use the GoogleSearchRetriever to fetch information from the web.</li>
+                                <li class="rag-desc-li-cybermodal-rag">Knowledge Base: We implement a simple dictionary as a knowledge base.</li>
+                                <li class="rag-desc-li-cybermodal-rag">Wolfram Alpha: We use the WolframAlphaRetriever to access computational knowledge.</li>
+                                <li class="rag-desc-li-cybermodal-rag">SQL Database: We set up an SQLite database and create an SQL agent to query it.</li>
+                            </ul>
+                            <p>The retrieve_information function combines results from all these sources.</p>
 
-                        <h3 class="rag-desc-h3-cybermodal-rag">4. LLM</h3>
-                        <p>We use OpenAI's language model to generate the final response based on the prompt and retrieved information.</p>
+                            <h3 class="rag-desc-h3-cybermodal-rag">4. LLM</h3>
+                            <p>We use OpenAI's language model to generate the final response based on the prompt and retrieved information.</p>
 
-                        <div class="rag-desc-highlight-cybermodal-rag">
-                            <p>This implementation showcases how RAG can be used to enhance the capabilities of an LLM by incorporating external knowledge sources and structured data retrieval. The combination of different tools and retrievers allows for a more comprehensive and accurate response to user queries.</p>
+                            <div class="rag-desc-highlight-cybermodal-rag">
+                                <p>This implementation showcases how RAG can be used to enhance the capabilities of an LLM by incorporating external knowledge sources and structured data retrieval. The combination of different tools and retrievers allows for a more comprehensive and accurate response to user queries.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="close-button-cybermodal-rag" onclick="closeModalLLM()">Disconnect</button>
             </div>
-            <button class="close-button-cybermodal-rag" onclick="closeModalLLM()">Disconnect</button>
         </div>
-    </div>
 
-    <div class="modal-overlay-win95-modal" id="modalOverlay-Skillset">
-        <div class="modal-win95-modal">
-            <h2 class="modal-title-win95-modal">
-                Welcome to Cybernet-legacy
-                <button class="close-button-title-win95-modal" onclick="closeModalSkillset()">X</button>
-            </h2>
-            <div id="skillsetexplain" class="modal-content-win95-modal">
-                <!-- Your modal content goes here -->
-                <p>This is a Windows 95 style modal with unique class names.</p>
-                <p>The modal takes up most of the webpage in height and width.</p>
-                <!-- Add more content here to see scrolling behavior -->
+        <div class="modal-overlay-win95-modal" id="modalOverlay-Skillset">
+            <div class="modal-win95-modal">
+                <h2 class="modal-title-win95-modal">
+                    Welcome to Cybernet-legacy
+                    <button class="close-button-title-win95-modal" onclick="closeModalSkillset()">X</button>
+                </h2>
+                <div id="skillsetexplain" class="modal-content-win95-modal">
+                    <!-- Your modal content goes here -->
+                    <p>This is a Windows 95 style modal with unique class names.</p>
+                    <p>The modal takes up most of the webpage in height and width.</p>
+                    <!-- Add more content here to see scrolling behavior -->
+                </div>
+                <button class="close-button-win95-modal" onclick="closeModalSkillset()">Disconnect</button>
             </div>
-            <button class="close-button-win95-modal" onclick="closeModalSkillset()">Disconnect</button>
         </div>
-    </div>
+        </div>
 
-    <canvas id="c"></canvas>
-    <img src="assets/images/cyberpunk.png" id="cyberpunk_img" class="bg-image" style="display:none;">
-    <img src="assets/images/outdoors.png" id="grass_img" class="bg-image" style="display:none;">
-    <img src="assets/images/solar-punk.png" id="solarpunk_img" class="bg-image" style="display:none;">
-    <audio id="music" loop>
-        <source src="assets/music/intro.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/lib/ComponentLoader.js"></script>
-    <script src="js/pages/home.js"></script>
-    <script src="js/lib/llmChat.js"></script>
-    <script src="js/lib/games.js"></script>
+        <canvas id="c"></canvas>
+        <img src="assets/images/cyberpunk.png" loading="lazy" id="cyberpunk_img" class="bg-image" style="display:none;">
+        <img src="assets/images/outdoors.png" loading="lazy" id="grass_img" class="bg-image" style="display:none;">
+        <img src="assets/images/solar-punk.png" loading="lazy" id="solarpunk_img" class="bg-image" style="display:none;">
+        <audio id="music" loop>
+            <source src="assets/music/intro.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/lib/ComponentLoader.js"></script>
+        <script src="js/pages/home.js"></script>
+        <script src="js/lib/llmChat.js"></script>
+        <script src="js/lib/games.js"></script>
 </body>
 </html>

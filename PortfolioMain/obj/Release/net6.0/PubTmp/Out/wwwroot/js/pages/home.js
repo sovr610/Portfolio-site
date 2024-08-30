@@ -10,6 +10,118 @@ const cursorPath = 'assets/Cursors/catppuccin-frappe-red-cursors/';
 c.height = window.innerHeight;
 c.width = window.innerWidth;
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const progressBar = document.querySelector('.progress-zz');
+    const percentageText = document.querySelector('.percentage-zz');
+    const loadingScreen = document.getElementById('loading-screen-zz');
+    const content = document.getElementById('content');
+
+    let assetsLoaded = 0;
+    let totalAssets = 0;
+    let estimatedSpeed = 1; // Default speed factor
+
+    // Function to update the progress bar
+    function updateProgressBar() {
+        const progress = (assetsLoaded / totalAssets) * 100;
+        progressBar.style.width = `${progress}%`;
+        percentageText.textContent = `${Math.floor(progress)}%`;
+
+        // Hide the loading screen once everything is loaded
+        if (progress >= 100) {
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                content.style.display = 'block';
+            }, 500); // Small delay to make sure the last 100% is displayed
+        }
+    }
+
+    // Function to estimate internet speed
+    function estimateSpeed() {
+        const startTime = new Date().getTime();
+        const image = new Image();
+        const testImage = "https://via.placeholder.com/500"; // URL of a known-size image
+        image.src = testImage + "?t=" + startTime; // Cache-busting query string
+
+        image.onload = function () {
+            const endTime = new Date().getTime();
+            const duration = (endTime - startTime) / 1000; // Time in seconds
+            const imageSize = 500 * 500 * 3; // Estimate for a 500x500 image, assuming 3 bytes per pixel (RGB)
+            const speedBps = (imageSize * 8) / duration; // Speed in bits per second
+            const speedMbps = speedBps / (1024 * 1024); // Convert to Mbps
+
+            // Adjust speed factor based on speed estimation
+            estimatedSpeed = Math.min(Math.max(speedMbps / 5, 0.5), 2); // Normalize between 0.5x and 2x
+        };
+    }
+
+    // Observe loading of resources
+    const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntriesByType('resource');
+        totalAssets += entries.length;
+        entries.forEach((entry) => {
+            assetsLoaded++;
+            updateProgressBar();
+        });
+    });
+
+    observer.observe({ entryTypes: ['resource'] });
+
+    // Fallback for when the window load event fires (ensures all resources are accounted for)
+    window.addEventListener('load', function () {
+        assetsLoaded++;
+        totalAssets++;
+        updateProgressBar();
+
+        observer.disconnect();
+    });
+
+    // Simulate asset loading progress based on estimated speed
+    function simulateLoading() {
+        let simulatedProgress = 0;
+        const interval = setInterval(() => {
+            simulatedProgress += estimatedSpeed; // Adjust based on estimated speed
+            if (simulatedProgress >= 100) {
+                simulatedProgress = 100;
+                clearInterval(interval);
+            }
+
+            progressBar.style.width = `${simulatedProgress}%`;
+            percentageText.textContent = `${Math.floor(simulatedProgress)}%`;
+
+            if (simulatedProgress >= 100) {
+                loadingScreen.style.display = 'none';
+                content.style.display = 'block';
+            }
+        }, 100);
+    }
+
+    // Start speed estimation and simulate loading based on the result
+    estimateSpeed();
+    setTimeout(simulateLoading, 1000); // Simulate loading after speed estimation
+});
+
+
+
+
+
+
+function reloadScript(scriptId, scriptSrc) {
+    const oldScript = document.getElementById(scriptId);
+    if (oldScript) {
+        oldScript.parentNode.removeChild(oldScript);
+    }
+
+    const newScript = document.createElement('script');
+    newScript.id = scriptId;
+    newScript.src = scriptSrc;
+    newScript.onload = function () {
+        console.log(`${scriptSrc} reloaded.`);
+    };
+
+    document.body.appendChild(newScript);
+}
+
 // Chinese characters - taken from the unicode charset
 var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
 // Converting the string into an array of single characters
@@ -1997,11 +2109,77 @@ $(document).ready(function () {
     document.getElementById('download-pdf-intro').addEventListener('click', function () {
         window.open('assets/resume-current.pdf', '_blank');
     });
+    var crtToggle = true;
+
+
 
 
     (function () {
         // ... (other encapsulated code)
         let rightPanel = document.getElementById('sidePanelContent');
+
+        const toggleSettings = {
+            crt: ['On', 'Off'],
+            smoothLighting: ['Maximum', 'Minimum', 'OFF'],
+            '3dAnaglyph': ['OFF', 'ON'],
+            viewBobbing: ['OFF', 'ON'],
+            advancedOpenGL: ['ON', 'OFF'],
+            clouds: ['ON', 'OFF'],
+            serverTextures: ['ON', 'OFF'],
+            fullscreen: ['OFF', 'ON'],
+            vsync: ['OFF', 'ON']
+        };
+
+        document.querySelectorAll('.setting-misc[data-setting]').forEach(setting => {
+            setting.addEventListener('click', function () {
+                const settingName = this.getAttribute('data-setting');
+                const span = this.querySelector('span');
+                const currentValue = span.textContent;
+                const options = toggleSettings[settingName];
+                const nextIndex = (options.indexOf(currentValue) + 1) % options.length;
+
+               
+
+                if (settingName === 'crt') {
+                    if (currentValue == 'On') {
+                        $('body').find('#crt-container').removeClass('crt');
+                    }
+                    else {
+                        $('body').find('#crt-container').addClass('crt');
+                    }
+                }
+
+                span.textContent = options[nextIndex];
+            });
+        });
+
+        // Prevent text selection on double-click
+        document.querySelectorAll('.setting, .done-button').forEach(element => {
+            element.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+            });
+        });
+
+        $('body').find('#legacy-site').on('click', () => {
+            window.location = 'Legacy/oled_glasses'
+        });
+
+        const container = document.getElementById('container-misc');
+        const buttons = document.querySelectorAll('.button-misc');
+        const defaultColor = '#3a6ea5';
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                const color = button.getAttribute('data-color');
+                button.style.backgroundColor = color;
+                container.style.background = `linear-gradient(45deg, ${color}22, ${color}11)`;
+            });
+
+            button.addEventListener('mouseout', () => {
+                button.style.backgroundColor = defaultColor;
+                container.style.background = 'rgba(255, 255, 255, 0.9)';
+            });
+        });
 
         function initTabs() {
             const tabButtons = rightPanel.querySelectorAll('.tab-button');
@@ -2085,14 +2263,14 @@ $(document).ready(function () {
 
 
         let themeStored = localStorage.getItem("theme_home");
-        var theme = 0;
+        var theme = 1;
         $("body").find("#cyberpunk_img").hide();
         $("body").find("#grass_img").hide();
         $("body").find("#solarpunk_img").hide();
         $("body").find("#btnVerse").prop("disabled", "true");
         $("body").find("#c").hide();
         if (themeStored != null) {
-            theme = themeStored;
+            //theme = themeStored; //removed due to time it takes for images to be loaded.
         }
 
         setTheme(theme);
@@ -2179,7 +2357,7 @@ $(document).ready(function () {
                 $('body').find('#project-main').hide();
                 $('body').find('#LLM').hide();
                 $('body').find('#WebXR').hide();
-                $('body').find('#Components').hide();
+                $('body').find('#components').hide();
                 $('body').find('#Misc').hide();
                 break;
             case "btnProjects":
@@ -2187,7 +2365,7 @@ $(document).ready(function () {
                 $('body').find('#project-main').show();
                 $('body').find('#LLM').hide();
                 $('body').find('#WebXR').hide();
-                $('body').find('#Components').hide();
+                $('body').find('#components').hide();
                 $('body').find('#Misc').hide();
 
                 break;
@@ -2196,15 +2374,33 @@ $(document).ready(function () {
                 $('body').find('#project-main').hide();
                 $('body').find('#LLM').show();
                 $('body').find('#WebXR').hide();
-                $('body').find('#Components').hide();
+                $('body').find('#components').hide();
                 $('body').find('#Misc').hide();
                 break;
             case "btnComponents":
+                let weber = document.getElementById('WebXR');
+                weber.innerHTML = '';
+                let components = document.getElementById('components');
+                components.innerHTML = '';
+                components.innerHTML = `
+                                        <a href="content/angular-components.zip" download="Angular-components.zip" class="cyberpunk-button-download">
+                            Download Angular Components
+                        </a>
+                        <a href="content/react-components.zip" download="React-components.zip" class="cyberpunk-button-download">
+                            Download React Components
+                        </a>
+                        <a href="https://github.com/sovr610/react-angular-tool" target="_blank" class="cyberpunk-button-download">
+                            Angular-React Tool Github
+                        </a><br/>
+                        <div class="main-div"><div><div id="react-root"></div></div><div><app-root></app-root></div></div>
+                `;
+                reloadScript('bundlescript', './js/lib/bundle-components.js');
+
                 $('body').find('#Introduction').hide();
                 $('body').find('#project-main').hide();
                 $('body').find('#LLM').hide();
                 $('body').find('#WebXR').hide();
-                $('body').find('#Components').show();
+                $('body').find('#components').show();
                 $('body').find('#Misc').hide();
                 break;
             case "btnMisc":
@@ -2212,9 +2408,10 @@ $(document).ready(function () {
                 $('body').find('#project-main').hide();
                 $('body').find('#LLM').hide();
                 $('body').find('#WebXR').hide();
-                $('body').find('#Components').hide();
+                $('body').find('#components').hide();
                 $('body').find('#Misc').show();
                 break;
+
             
         }
 

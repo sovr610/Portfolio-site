@@ -2018,3 +2018,242 @@ body {
 .rag-node {
     /* Add any specific styles for rag-nodes here if needed */
 }
+
+.cyberpunk-button-download {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #0ff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #000;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px #0ff, inset 0px 0px 10px 2px #0ff;
+    transition: background 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+    .cyberpunk-button-download:hover {
+        background: #0ff;
+        color: #000;
+        box-shadow: 0px 0px 20px 4px #0ff, inset 0px 0px 20px 4px #0ff;
+    }
+
+
+
+#loading-screen-zz {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #00ff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 9999;
+}
+
+/* Boot-up text style */
+.boot-up-zz .text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Progress bar container */
+.progress-bar-zz {
+    width: 80%;
+    height: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Progress inside the progress bar */
+.progress-zz {
+    height: 100%;
+    background-color: #00ff00;
+    width: 0;
+    transition: width 0.2s ease;
+}
+
+/* Percentage text */
+.percentage-zz {
+    font-size: 18px;
+}
+
+
+
+
+.wrapper-misc {
+    background-color: #1D1D1D;
+    font-family: 'VT323', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+
+.container-misc {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #373737;
+    padding: 20px;
+    width: 600px;
+}
+
+.h1-misc {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.settings-grid-misc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.setting-misc {
+    background-color: #4C4C4C;
+    border: 2px solid #373737;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+    .setting-misc:hover {
+        background-color: #5A5A5A;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .setting-misc:active {
+        transform: translateY(1px);
+    }
+
+    .setting-misc::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+
+    .setting-misc:hover::after {
+        animation: ripple 1s ease-out;
+    }
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+.setting-misc.highlighted {
+    border-color: #3E8EDE;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(62, 142, 222, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(62, 142, 222, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(62, 142, 222, 0);
+    }
+}
+
+.done-button-misc {
+    background-color: #4C4C4C;
+    border: 2px solid #373737;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+    .done-button-misc:hover {
+        background-color: #5A5A5A;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .done-button-misc:active {
+        transform: translateY(1px);
+    }
+
+    .done-button-misc::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+
+    .done-button-misc:hover::after {
+        animation: ripple 1s ease-out;
+    }
+
+
+.win95-button {
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #404040 #404040 #dfdfdf;
+    padding: 6px 12px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 0 #000;
+}
+
+    .win95-button:active {
+        border-color: #404040 #dfdfdf #dfdfdf #404040;
+        box-shadow: -1px -1px 0 0 #000;
+    }
