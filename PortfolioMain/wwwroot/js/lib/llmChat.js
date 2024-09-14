@@ -109,10 +109,14 @@ function typeMessage(message, element, cursor, userInput) {
 }
 
 function speakText(text) {
-    if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        speechSynthesis.speak(utterance);
-    }
+    speak(text).then(result => {
+        console.log('AJAX call success:', result);
+    }).catch(error => {
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+        }
+    });
 }
 
 async function sendPromptToBackend(prompt) {
@@ -162,4 +166,58 @@ promptInput.addEventListener('keypress', (e) => {
         handleSubmit();
     }
 });
+
+function q(selector) {
+    return document.querySelector(selector);
+}
+function speak(phrase) {
+    try {
+        alert(phrase)
+        // Wrap the AJAX call in a Promise
+        return new Promise((resolve, reject) => {
+            var dataTest = {
+                data: phrase,
+            };
+            $.ajax({
+                method: "POST",
+                data: phrase,
+                url: "/TTS",
+                contentType: "application/json; charset=utf-8",
+                timeout: 300000,
+                success: function (e) {
+                    var file = e.data;
+                    var blob = b64toBlob(e.data);
+                    let ios = false;
+
+                    if (ios == false) {
+                        let blobObj = URL.createObjectURL(blob);
+                        q('#audio').src = blobObj;
+                        $('body').find('#audio').trigger('play');
+                        //playSoundFromBlob(blob, position, onEnd);
+                    } else {
+                        //q('#ios_aud').src = URL.createObjectURL(blob);
+                        //$('body').find('#ios_aud').trigger('play');
+                    }
+
+                    // Resolve the promise with true on success
+                    resolve(true);
+                },
+                failure: function (response) {
+                    alert(response.d);
+                    // Reject the promise with false on failure
+                    reject(false);
+                },
+                error: (a, b, c) => {
+                    console.error(c);
+                    listening = true;
+                    // Reject the promise with false on error
+                    reject(false);
+                },
+            });
+        });
+    } catch (e) {
+        console.error(e);
+        return Promise.reject(false); // Return a rejected promise with false in case of error
+    }
+}
 

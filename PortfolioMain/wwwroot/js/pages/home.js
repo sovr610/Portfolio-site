@@ -2114,6 +2114,90 @@ $(document).ready(function () {
 
 
 
+    const player = document.getElementById('player');
+    const titleBar = document.getElementById('title-bar');
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const progressBar = document.getElementById('progressBar');
+    const songInfo = document.getElementById('songInfo');
+
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    // Audio setup
+    //const audio = new Audio('./recording.mp3');
+    //audio.addEventListener('timeupdate', updateProgress);
+    //audio.addEventListener('loadedmetadata', () => {
+    //    songInfo.textContent = 'Sample.mp3 - 0:00 / ' + formatTime(audio.duration);
+    //});
+
+    //titleBar.addEventListener('mousedown', dragStart);
+    //document.addEventListener('mousemove', drag);
+    //document.addEventListener('mouseup', dragEnd);
+
+    /*playBtn.addEventListener('click', () => {
+        audio.play();
+    });
+
+    pauseBtn.addEventListener('click', () => {
+        audio.pause();
+    });
+
+    function dragStart(e) {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+
+        if (e.target === titleBar) {
+            isDragging = true;
+        }
+    }
+
+    function drag(e) {
+        if (isDragging) {
+            e.preventDefault();
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+
+            xOffset = currentX;
+            yOffset = currentY;
+
+            setTranslate(currentX, currentY, player);
+        }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+        el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+    }
+
+    function dragEnd(e) {
+        initialX = currentX;
+        initialY = currentY;
+
+        isDragging = false;
+    }
+
+    function updateProgress() {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = progress + '%';
+        songInfo.textContent = 'Sample.mp3 - ' + formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+    }
+
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+    }*/
+
+
+
+
+
+
     (function () {
         // ... (other encapsulated code)
         let rightPanel = document.getElementById('sidePanelContent');

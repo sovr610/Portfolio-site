@@ -1729,6 +1729,10 @@
       "PackagePath": "staticwebassets\\assets\\block_textures\\STALACTITE_TEXTURE.png"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\clouds-skybox-upscaled.png",
+      "PackagePath": "staticwebassets\\assets\\clouds-skybox-upscaled.png"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\games\\art-gallery-resources\\52215462365_00000.jpg",
       "PackagePath": "staticwebassets\\assets\\games\\art-gallery-resources\\52215462365_00000.jpg"
     },
@@ -2005,6 +2009,14 @@
       "PackagePath": "staticwebassets\\assets\\wafis-logo-small.jpg"
     },
     {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\water-normals\\a-water-assets\\water-normal-1.png",
+      "PackagePath": "staticwebassets\\assets\\water-normals\\a-water-assets\\water-normal-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\assets\\water-normals\\a-water-assets\\water-normal-2.png",
+      "PackagePath": "staticwebassets\\assets\\water-normals\\a-water-assets\\water-normal-2.png"
+    },
+    {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\content\\FancyInput.html",
       "PackagePath": "staticwebassets\\content\\FancyInput.html"
     },
@@ -2099,6 +2111,10 @@
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\ComponentLoader_old.js",
       "PackagePath": "staticwebassets\\js\\lib\\ComponentLoader_old.js"
+    },
+    {
+      "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\a-water.v0.1.1.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\a-water.v0.1.1.min.js"
     },
     {
       "Id": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\PortfolioMain\\wwwroot\\js\\lib\\bundle-components.js",

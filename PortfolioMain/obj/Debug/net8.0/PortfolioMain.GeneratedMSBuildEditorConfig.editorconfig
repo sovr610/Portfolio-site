@@ -1,0 +1,119 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PortfolioMain
+build_property.RootNamespace = PortfolioMain
+build_property.ProjectDir = C:\Users\Sovr6\OneDrive\Desktop\projects\Portfolio-site\PortfolioMain\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Sovr6\OneDrive\Desktop\projects\Portfolio-site\PortfolioMain
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Pages/Components/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Pages/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/components/SmartImage.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbXBvbmVudHNcU21hcnRJbWFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/components/Button.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbXBvbmVudHNcQnV0dG9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-53aqebzbcd
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/AboutMe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dE1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/LLM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMTE0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/pdf_viewer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwZGZfdmlld2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/Wafis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXYWZpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/WebXR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWJYUi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/aframe_game.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XGFmcmFtZV9nYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/ai_terminal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XGFpX3Rlcm1pbmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/JSPY.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XEpTUFkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/NodeItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XE5vZGVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/oled_glasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XG9sZWRfZ2xhc3Nlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/opencv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XG9wZW5jdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Legacy/ParkerScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVnYWN5XFBhcmtlclNjcmlwdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-592i34hilb

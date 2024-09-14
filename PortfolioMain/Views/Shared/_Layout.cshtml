@@ -17,6 +17,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="~/js/lib/pdf.mjs" type="module"></script>
     <script src="~/lib/ajax-caller/AjaxCaller.js"></script>
+    <base href="~/" />
 </head>
 <body>
     <header>
@@ -88,8 +89,7 @@
 
 
 
-
-
+    <script src="_framework/blazor.webassembly.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

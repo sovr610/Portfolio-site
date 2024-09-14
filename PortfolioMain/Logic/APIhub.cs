@@ -26,10 +26,16 @@ namespace portfolio.Logic
             try
             {
                 LLMmodel llm = new LLMmodel();
-                llm.input = prompt;
+                llm.LlmBackground = "An AI for my portfolio site";
+                llm.LlmLangToogle = false;
+                llm.LlmTraits = new List<string> { "AI", "Portfolio" };
+                llm.Phrase = prompt;
+                llm.ClassificationActive = false;
+                llm.LlmName = "Zen";
+                
                 string data = JsonConvert.SerializeObject(llm);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                var response = HttpClient.PostAsync("/llm", content).Result;
+                var response = HttpClient.PostAsync("/chat", content).Result;
                 string results = await response.Content.ReadAsStringAsync();
                 Log.Information("Got response from /llm: " + results);
                 return results;
@@ -46,7 +52,7 @@ namespace portfolio.Logic
             try
             {
                 LLMmodel llm = new LLMmodel();
-                llm.input = phrase;
+                llm.Phrase = phrase;
                 string data = JsonConvert.SerializeObject(llm);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
                 var response = HttpClient.PostAsync("/nlp", content).Result;

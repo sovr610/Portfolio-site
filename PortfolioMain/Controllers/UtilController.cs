@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+//using Microsoft.
 using Microsoft.Extensions.Hosting.Internal;
 
 namespace PortfolioMain.Controllers
 {
-    public class UtilController : Controller
+   /* public class UtilController : Controller
     {
 
         private readonly string _connectionString;
@@ -67,6 +67,6 @@ namespace PortfolioMain.Controllers
         public string Language { get; set; }
         public int ScreenWidth { get; set; }
         public int ScreenHeight { get; set; }
-    }
+    }*/
 }
 

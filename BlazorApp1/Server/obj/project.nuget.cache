@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GHXtHUuk/SE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sovr6\\OneDrive\\Desktop\\projects\\Portfolio-site\\BlazorApp1\\Server\\BlazorApp1.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sovr6\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\6.0.32\\microsoft.aspnetcore.components.webassembly.server.6.0.32.nupkg.sha512"
+  ],
+  "logs": []
+}

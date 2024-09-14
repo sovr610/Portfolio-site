@@ -18,6 +18,7 @@
     <script src="https://unpkg.com/aframe-effects-component@1.4.4/dist/aframe-effects.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <script src="./js/lib/minecraft-clone/dist/minecraft-world.js"></script>
+    <script src="js/lib/llmChat.js" defer></script>
     <script id="bundlescript" src="./js/lib/bundle-components.js"></script>
     <link rel="stylesheet" href="css/pages/home.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -99,43 +100,43 @@
             },
 
             vertexShader: `
-                  varying vec3 vWorldPosition;
-            varying vec3 vNormal;
-            varying vec2 vUv;
+                      varying vec3 vWorldPosition;
+                varying vec3 vNormal;
+                varying vec2 vUv;
 
-            void main() {
-                vUv = uv;
-                vNormal = normal;
-                vWorldPosition = (modelMatrix * vec4(position, 1.0)).xyz;
-                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-            }
-                `,
+                void main() {
+                    vUv = uv;
+                    vNormal = normal;
+                    vWorldPosition = (modelMatrix * vec4(position, 1.0)).xyz;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+                    `,
 
             fragmentShader: `
-                  uniform vec3 color;
-                  uniform float roughness;
-                  uniform float metalness;
-                  uniform sampler2D normalMap;
-                  uniform samplerCube envMap;
+                      uniform vec3 color;
+                      uniform float roughness;
+                      uniform float metalness;
+                      uniform sampler2D normalMap;
+                      uniform samplerCube envMap;
 
-                  varying vec3 vWorldPosition;
-                  varying vec3 vNormal;
-                  varying vec2 vUv;
+                      varying vec3 vWorldPosition;
+                      varying vec3 vNormal;
+                      varying vec2 vUv;
 
 void main() {
-                    vec3 normal = texture2D(normalMap, vUv).rgb * 2.0 - 1.0;
-                    vec3 viewDir = normalize(cameraPosition - vWorldPosition);
-                    vec3 reflectDir = reflect(-viewDir, normal);
+                        vec3 normal = texture2D(normalMap, vUv).rgb * 2.0 - 1.0;
+                        vec3 viewDir = normalize(cameraPosition - vWorldPosition);
+                        vec3 reflectDir = reflect(-viewDir, normal);
 
-                    vec3 envColor = textureCube(envMap, reflectDir).rgb;
-                    vec3 diffuse = color;
-                    vec3 specular = mix(vec3(0.04), diffuse, metalness);
+                        vec3 envColor = textureCube(envMap, reflectDir).rgb;
+                        vec3 diffuse = color;
+                        vec3 specular = mix(vec3(0.04), diffuse, metalness);
 
-                    vec3 finalColor = mix(diffuse, envColor, roughness * metalness);
+                        vec3 finalColor = mix(diffuse, envColor, roughness * metalness);
 
-            gl_FragColor = vec4(finalColor, 1.0);
+                gl_FragColor = vec4(finalColor, 1.0);
 }
-                `
+                    `
         });
 
         // Component to handle model setup, including shadows and transparent materials
@@ -260,13 +261,27 @@ void main() {
                                 <div class="window-intro">
                                     <div class="title-bar-intro">Professional Introduction</div>
                                     <div class="content-intro">
+
                                         <h1>Parker Bidigare</h1><img src="assets/profile.jpg" loading="lazy" alt="Profile Image" class="profile-img">
                                         <br /><br />
+                                        <!--<div class="player-95aud" id="player">
+                                            <div class="title-bar-95aud" id="title-bar">My Introduction, Welcome! (draggable)</div>
+                                            <div class="controls-95aud">
+                                                <button id="playBtn" class="button-95aud">►</button>
+                                                <button id="pauseBtn" class="button-95aud">❚❚</button>
+                                            </div>
+                                            <div class="progress-95aud">
+                                                <div class="progress-bar-95aud" id="progressBar"></div>
+                                            </div>
+                                            <div class="song-info-95aud" id="songInfo">
+                                                Ready to play
+                                            </div>
+                                        </div>-->
                                         <p>Welcome to my professional portfolio. My name is Parker Bidigare, and I am a seasoned software developer with a comprehensive skill set in various programming languages and frameworks. My passion for software development began at an early age, starting with Java and VB.NET, and has grown into a lifelong pursuit of creating innovative solutions through technology.</p>
                                         <p>This portfolio is a showcase of my expertise across a range of projects, including AI integrations, virtual and augmented reality applications, and custom Blazor components. It also features a proprietary front-end framework that I have developed to enhance user experience and interaction.</p>
                                         <p>The development of this site was driven by ASP.NET MVC architecture and enhanced with Blazor Server integration, predominantly using C#. Additionally, I have employed a variety of JavaScript libraries such as jQuery, Bootstrap, Three.js, AFrame.js, PDF.js, and Phaser.js to enrich the site's functionality. More tools and libraries will be integrated as this site continues to evolve.</p>
                                         <p>Please visit my About Me page for a deeper insight into my journey and interests. You might find a delightful surprise there! I hope you find my work compelling and that it sparks your interest. Enjoy exploring my site and have a wonderful day!</p>
-                                        <br/>
+                                        <br />
                                         <a href="Legacy/oled_glasses" target="_blank" class="win95-button">Legacy Portfolio Site</a>
                                     </div>
                                 </div>
@@ -823,7 +838,7 @@ if __name__ == "__main__":
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/lib/ComponentLoader.js"></script>
         <script src="js/pages/home.js"></script>
-        <script src="js/lib/llmChat.js"></script>
+
         <script src="js/lib/games.js"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.StaticFiles;
 using portfolio.Logic;
 using PortfolioMain.interfaces;
 
+
+
 namespace PortfolioMain
 {
     public class Program
@@ -13,6 +15,8 @@ namespace PortfolioMain
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
+            builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<IApiHub, APIhub>();
 
             var provider = new FileExtensionContentTypeProvider();
@@ -44,7 +48,6 @@ namespace PortfolioMain
             });
             });
 
-            builder.Services.AddServerSideBlazor();
             builder.Services.AddHttpClient();
             builder.Services.AddDistributedMemoryCache();
 
@@ -121,7 +124,9 @@ namespace PortfolioMain
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages();
             app.MapBlazorHub();
+            app.MapFallbackToPage("/_Host");
             app.Run();
         }
     }

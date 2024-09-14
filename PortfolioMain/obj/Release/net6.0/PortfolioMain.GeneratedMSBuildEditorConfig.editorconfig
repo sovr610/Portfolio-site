@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Sovr6\OneDrive\Desktop\projects\Portfolio-site\PortfolioMain
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Pages/Components/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Pages/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/components/SmartImage.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbXBvbmVudHNcU21hcnRJbWFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -25,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Shared/components/Button.razor]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbXBvbmVudHNcQnV0dG9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-53aqebzbcd
+
+[C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sovr6/OneDrive/Desktop/projects/Portfolio-site/PortfolioMain/Views/Home/AboutMe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dE1lLmNzaHRtbA==

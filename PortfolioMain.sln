@@ -9,6 +9,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "brainjs-chatbot-trainer", "
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "node-server", "node-server\node-server.esproj", "{3D1C06F6-D62F-48DC-8615-FB4D6575A82F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp2", "BlazorApp2\BlazorApp2.csproj", "{175052C1-CF01-4A88-B2C2-296EB88B3C62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{3D1C06F6-D62F-48DC-8615-FB4D6575A82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D1C06F6-D62F-48DC-8615-FB4D6575A82F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D1C06F6-D62F-48DC-8615-FB4D6575A82F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{175052C1-CF01-4A88-B2C2-296EB88B3C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175052C1-CF01-4A88-B2C2-296EB88B3C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175052C1-CF01-4A88-B2C2-296EB88B3C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175052C1-CF01-4A88-B2C2-296EB88B3C62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
